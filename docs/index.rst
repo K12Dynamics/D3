@@ -11,7 +11,3 @@ Contents:
    features/*
    administration/*
    *
-
-Contribute to this documentation:
-
-   http://www.sphinx-doc.org/en/stable/rest.html

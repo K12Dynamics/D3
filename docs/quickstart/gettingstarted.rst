@@ -19,3 +19,6 @@ Upon successful login, D3 displays your custom home page. If you have not yet de
 .. figure:: img/initial-landing.png
 
    Initial landing page
+
+User Interface Elements
+--------------------------

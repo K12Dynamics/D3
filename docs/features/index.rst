@@ -1,3 +1,5 @@
+Features
+=========
 * Favorites
 * Library
 * Dashboards

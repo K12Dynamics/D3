@@ -29,4 +29,4 @@ Taking screenshots
 -----------------------
 Always set your browser width to 1280px (and preferably use a height of 720px). This matches a 720P HD television, and it is the minimum resolution for dashboards to include more than one chart per row. To manage your browser width in Chrome, hit F12, then the "Toggle device mode" icon. Click edit in the devices dropdown to add a "720P" option if you don't already have it. Use this, and make sure your scaling is 100%.
 
-The easiest way to capture the content area of the browser in Chrome is to install the Awesome Screenshot extension.
+The easiest way to capture the content area of the browser in Chrome is to install the Full Page Screen Capture extension.

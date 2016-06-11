@@ -19,6 +19,6 @@ Watch Lists
 KPIs
 ======================
 
-Sharing and Exports
+Sharing and Exporting
 ======================
 

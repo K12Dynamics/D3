@@ -20,7 +20,7 @@ You can also clone this project locally to work on it. You will need Python and 
 
 Instructions:
 
-1. Install Python 2.7.x
+1. Install Python 2.7.x (make sure to select the option to add python to your path)
 2. Install Sphinx: `pip install sphinx sphinx-autobuild`
 3. in the docs folder of your cloned project: `sphinx-autobuild . _build/html`
 4. Browse to http://localhost:8000

@@ -58,6 +58,15 @@ The main documentation for D3 is organized into the following sections:
    
    technical/*
 
+..  _about-section:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: About D3
+   :glob:
+
+   about/*
+   
 ..
     Indices and tables
     ==================

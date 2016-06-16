@@ -25,7 +25,6 @@ The main documentation for D3 is organized into the following sections:
 .. toctree::
    :maxdepth: 2
    :caption: Quick Start
-   :glob:
 
    quickstart/gettingstarted
    quickstart/tutorials
@@ -36,36 +35,34 @@ The main documentation for D3 is organized into the following sections:
 .. toctree::
    :maxdepth: 2
    :caption: Features
-   :glob:
 
-   features/*
+   features/index
 
 .. _administration-section:
 
 .. toctree::
    :maxdepth: 2
    :caption: Administration
-   :glob:
    
-   administration/*
+   administration/index
+   administration/defaultlibrary
+   administration/customreporting
    
 .. _technical-section:
 
 .. toctree::
    :maxdepth: 2
    :caption: Technical Reference
-   :glob:
    
-   technical/*
+   technical/index
 
 ..  _about-section:
 
 .. toctree::
    :maxdepth: 2
    :caption: About D3
-   :glob:
 
-   about/*
+   about/index
    
 ..
     Indices and tables

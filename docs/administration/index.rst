@@ -12,5 +12,4 @@ How are credentials recognized?
 Publishing Changes to the Library
 ==================================
 
-Custom Reporting
-==================
+

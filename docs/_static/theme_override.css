@@ -5,3 +5,7 @@
 .wy-nav-content {
     max-width: 1050px
 }
+
+table.docutils td > div.line-block {
+    margin-left: 0;
+}

@@ -9,7 +9,7 @@ For the most basic, text-driven web experiences, these technologies work well, a
 
 We are committed to a continued investment in supporting assistive technologies to better aid disabled D3 users. We are working towards providing things like full keyboard support, high-contrast visual elements, text-based equivalents of non-text elements and by adhering to standards like WAI-ARIA, WCAG 2.0, and Section 508.
 
-The web development technologies used to build D3 were chosen in part because of their recognition and commitment to including accessbility support. For more details, see `Bootstrap Accessibility <http://getbootstrap.com/getting-started/#accessibility>` and `Kendo UI Accessibility <http://docs.telerik.com/kendo-ui/accessibility/accessibility-overview>`.
+The web development technologies used to build D3 were chosen in part because of their recognition and commitment to including accessibility support. For more details, see `Bootstrap Accessibility <http://getbootstrap.com/getting-started/#accessibility>`_ and `Kendo UI Accessibility <http://docs.telerik.com/kendo-ui/accessibility/accessibility-overview>`_.
 
 
 .. _about-confidentiality
@@ -21,7 +21,7 @@ K-12 Dynamics warrants that it will take all commercially reasonable steps to ma
 
 K-12 Dynamics shall not:
 
-\(a) Disclose Confidential Student Educational Records (as defined in subsection d) to any person or entity except:
+\(a) Disclose Confidential Student Educational Records to any person or entity except:
 
 \(i) Those that need to know the Confidential Student Educational Records for the purposes this Agreement and agree to be bound by the provisions of this Section; or
 
@@ -29,10 +29,7 @@ K-12 Dynamics shall not:
 
 \(b) Use the Confidential Student Educational Records for any purpose other than the purposes this Agreement contemplates.
 
-\(c) Return of Confidential Student Educational Records
 
-Upon the written request by the customer, within thirty (30) calendar days, K-12 Dynamics will return to the customer or destroy all Confidential Student Educational records. If K-12 Dynamics destroys the Confidential Student Educational Records, K-12 Dynamics must certify that it has done so in writing and deliver that certificate to within thirty (30) calendar days of Licensee's initial written request for K-12 Dynamics to return or destroy all Confidential Student Records.
-
-\(d) Definition of Confidential Student Educational Records
+**Definition of Confidential Student Educational Records:**
 
 "Confidential Student Educational Records" means those records, files, documents, and other materials which (a) contain information directly related to a student; and (b) are maintained by an educational agency. See FERPA, 20 U.S.C.A. 1232g and accompanying regulations.

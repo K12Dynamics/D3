@@ -24,7 +24,7 @@ Upon successful login, D3 displays your custom home page. If you have not yet de
 User Interface Elements
 --------------------------
 
-D3 has a standard toolbar at the top of the application from which all actions within the application can be initiated.
+D3 has a standard header bar at the top of the application from which all actions within the application can be initiated.
 
 From left-to-right, the purpose of each component in the toolbar is:
 
@@ -43,9 +43,46 @@ Number 6 in the image above identifies the main content area that displays the c
 Navigating Around the App
 ---------------------------
 
-.. warning::
+Click the hamburger icon to access the pull-out navigation panel, from which you can access all D3 visualization features.
 
-   This section hasn't been written yet.
+.. figure:: img/navigating-hamburger.png
+
+.. tip::
+   The navigation panel closes automatically once an item is selected, but if you want to close it without selecting an item just click the hamburger icon again.
+
+The main area of the navigation panel is a tabbed interface, which provides access to each type of tool within D3. 
+
+.. figure:: img/navigating-tabs.png
+
+The purpose of each tab is as follows:
+
+* :ref:`Favorites <features-favorites>`: This is a unique view that allows you to collect your most used items for quick access.
+* :ref:`Library <features-library>`: Access dashboards, charts, and other items published to your organization as well as your personally created items.
+* :ref:`Scorecards <features-scorecards>`: View many measures at once for a single entity,such as a school or student.
+* :ref:`Data Explorer <features-explorations>`: Analyze and drill-down into your data dynamically using this visual explorer.
+* :ref:`Watch Lists <features-watchlists>`: Track and monitor individual sets of students, either explicitly or dynamically based on criteria.
+* :ref:`Settings <features-settings>`: Manage various configuration settings used within D3.
+
+.. note::
+   Availability of each of these tools is based on role, so you may not see all of these tabs.
+
+Also, at the bottom of this panel you will see the name of the currently logged in user, and a logout button.
+
+.. figure:: img/navigating-footer.png
+
+Sidebar Actions
+--------------------
+
+The sidebar is hidden by default to maximize the space given to visualizations displayed in the content area. Selecting the left-pointing double chevron on the far right of the header bar displays the sidebar. Once displayed, the sidebar stays open until you close it or navigate to a new screen.
+
+The items displayed in the sidebar will vary based on what type of visualization is displayed in the content area. You can perform a wide variety of functions from the sidebar, such as:
+ 
+ * View explanation, legend, and statistics associated with current visualization
+ * Link to other tools within D3
+ * Share and export the current visualization
+ * Modify the visualization by applying filters, changing the view, of adjusting other settings
+ * Manage other actions, such as making it your home screen or adding it to your favorities
+
 
 Using on Mobile Devices
 --------------------------

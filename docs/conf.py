@@ -12,15 +12,20 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+import sys
+import os
+import shlex
+import sphinx_rtd_theme
+import recommonmark
+
+from recommonmark.transform import AutoStructify
+from recommonmark.parser import CommonMarkParser
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-# import sys
 # sys.path.insert(0, os.path.abspath('.'))
-
-import sphinx_rtd_theme
 
 # -- General configuration ------------------------------------------------
 
@@ -31,19 +36,23 @@ import sphinx_rtd_theme
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.mathjax',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-# The suffix(es) of source filenames.
-# You can specify multiple suffix as a list of string:
-#
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+# Use Recommonmark's parser to convert markdown
+source_parsers = {
+    '.md': CommonMarkParser 
+}
+
+source_suffix = ['.rst', '.md']
 
 # The encoding of source files.
-#
 # source_encoding = 'utf-8-sig'
 
 # The master toctree document.
@@ -336,6 +345,13 @@ texinfo_documents = [
 #
 # texinfo_no_detailmenu = False
 
+github_doc_root = 'https://github.com/K12Dynamics/D3/tree/master/docs'
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+            'url_resolver': lambda url: github_doc_root + url,
+            'auto_toc_tree_section': 'Contents',
+            }, True)
+    app.add_transform(AutoStructify)
 
 # -- ReadTheDoc requirements and local template generation---------------------
 
@@ -347,7 +363,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
     # Override default css to get a larger width for local build
-    def setup(app):
+    def setupx(app):
         #app.add_javascript("custom.js")
         app.add_stylesheet('theme_override.css')
 else:

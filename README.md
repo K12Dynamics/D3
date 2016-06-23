@@ -8,20 +8,18 @@ Contribute to this documentation
 -------------------------------------
 The most straightforward way to edit this documentation directly on github.com.
 
-All documentation files are written in a format called reStructuredText.
+All documentation files are written in [CommonMark](http://commonmark.org/help/) markdown.
 
-Overview of reStructuredText syntax:
-
-http://www.sphinx-doc.org/en/stable/rest.html
+For some features not supported in markdown, it is necessary to embed reStructuredText directly. The [Recommonmark](http://recommonmark.readthedocs.io/en/latest/index.html) documentation explains how to use the this and other features found in Sphinx.
 
 Setting up locally
 ---------------------
-You can also clone this project locally to work on it. You will need Python and Sphinx installed to do so.
+You can also clone this project locally to work on it. You will need Python, Sphinx, and Recommonmark installed to do so.
 
 Instructions:
 
 1. Install Python 2.7.x (make sure to select the option to add python to your path)
-2. Install Sphinx: `pip install sphinx sphinx-autobuild`
+2. Install everything else: `pip install sphinx sphinx-autobuild recommonmark`
 3. In the docs folder of your cloned project: `sphinx-autobuild . _build/html`
 4. Browse to http://localhost:8000
 

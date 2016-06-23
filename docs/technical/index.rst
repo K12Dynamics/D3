@@ -1,8 +1,9 @@
+D3 Architecture
+=================
+
+D3 Agent
+=================
+
 OLAP Concepts
 ================
 
-OLAP Measures Used In D3
-=========================
-
-D3 Architecture
-=================

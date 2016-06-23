@@ -22,11 +22,13 @@ Instructions:
 
 1. Install Python 2.7.x (make sure to select the option to add python to your path)
 2. Install Sphinx: `pip install sphinx sphinx-autobuild`
-3. in the docs folder of your cloned project: `sphinx-autobuild . _build/html`
+3. In the docs folder of your cloned project: `sphinx-autobuild . _build/html`
 4. Browse to http://localhost:8000
 
 Taking screenshots
 -----------------------
-Always set your browser width to 1280px (and preferably use a height of 720px). This matches a 720P HD television, and it is the minimum resolution for dashboards to include more than one chart per row. To manage your browser width in Chrome, hit F12, then the "Toggle device mode" icon. Click edit in the devices dropdown to add a "720P" option if you don't already have it. Use this, and make sure your scaling is 100%.
+For screenshots of the entire window, first set your browser width to 1280px (and preferably use a height of 720px). This matches a 720P HD television, and it is the minimum resolution for dashboards to include more than one chart per row. To manage your browser width in Chrome, hit F12, then the "Toggle device mode" icon. Click edit in the devices dropdown to add a "720P" option if you don't already have it. Use this, and make sure your scaling is 100%.
 
-The easiest way to capture the content area of the browser in Chrome is to install the Full Page Screen Capture extension.
+The easiest way to capture the content area of the browser in Chrome is to install the Full Page Screen Capture extension, or just use the Snipping Tool.
+
+Annotated screenshots are maintained in the Visio file `drawings.vxdx`.

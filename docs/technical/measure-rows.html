@@ -1,0 +1,410 @@
+<tr><td>Inventory Data</td><td>Equipment Inventory Items</td><td>Equipment Count</td><td></td><td><span>Sum</span></td></tr>
+<tr><td>Inventory Data</td><td>Equipment Inventory Items</td><td>Buildings Assessed</td><td></td><td><span title="Sum(
+								IIF([Building].[Building].CurrentMember = [Building].[Building].[ALL], existing [Building].[Building].CurrentMember.Children,[Building].[Building].CurrentMember)
+								, Summator)">Calculated measure</span></td></tr>
+<tr><td>Istation</td><td>Student Istation Assessments</td><td># Students Taken Istation Assessments</td><td></td><td><span title="[Measures].[Internal Number of Students Taken Istation Assessments]">Calculated measure</span></td></tr>
+<tr><td>Istation</td><td>Student Istation Assessments</td><td># Students Meeting Expected Growth</td><td></td><td><span title="(
+IIF([Student].[Student].CurrentMember is [Student].[Student].[All]      
+	 ,Sum(existing [Student].[Internal Student Key].[Internal Student Key], [Measures].[Summator])
+,[Measures].[Summator])
+)">Calculated measure</span></td></tr>
+<tr><td>Istation</td><td>Student Istation Assessments</td><td># Students not Meeting Expected Growth</td><td></td><td><span title="(
+IIF([Student].[Student].CurrentMember is [Student].[Student].[All]      
+	 ,Sum(existing [Student].[Internal Student Key].[Internal Student Key], [Measures].[SummatorNotMeeting])
+,[Measures].[SummatorNotMeeting])
+)">Calculated measure</span></td></tr>
+<tr><td>Istation</td><td>Student Istation Assessments</td><td>% Students Meeting Expected Growth</td><td></td><td><span title="(   
+    DIVIDE([Measures].[# Students Meeting Expected Growth], [Measures].[# Students who took Istation assessments for First and Last Periods])
+)">Calculated measure</span></td></tr>
+<tr><td>Istation</td><td>Student Istation Assessments</td><td>% Students not Meeting Expected Growth</td><td></td><td><span title="(   
+    DIVIDE([Measures].[# Students not Meeting Expected Growth], [Measures].[# Students who took Istation assessments for First and Last Periods])
+)">Calculated measure</span></td></tr>
+<tr><td>Istation</td><td>Student Istation Assessments</td><td>Monthly % Students Meeting Expected Growth</td><td></td><td><span title="DIVIDE(
+	  ([Istation Monthly Growth Result].[Growth Result].&[Meets], [Measures].[Internal Number of Students Taken Istation Assessments])
+	, (
+	     ([Istation Monthly Growth Result].[Growth Result].&[Meets], [Measures].[Internal Number of Students Taken Istation Assessments])
+		  + 
+		 ([Istation Monthly Growth Result].[Growth Result].&[DoesNotMeet], [Measures].[Internal Number of Students Taken Istation Assessments])
+	  )
+	)">Calculated measure</span></td></tr>
+<tr><td>Istation</td><td>Student Istation Assessments</td><td>Monthly % Students not Meeting Expected Growth</td><td></td><td><span title="DIVIDE(
+	  ([Istation Monthly Growth Result].[Growth Result].&[DoesNotMeet], [Measures].[Internal Number of Students Taken Istation Assessments])
+	, (
+	     ([Istation Monthly Growth Result].[Growth Result].&[Meets], [Measures].[Internal Number of Students Taken Istation Assessments])
+		  + 
+		 ([Istation Monthly Growth Result].[Growth Result].&[DoesNotMeet], [Measures].[Internal Number of Students Taken Istation Assessments])
+	  )
+	)">Calculated measure</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI Test Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI Scale Score</td><td></td><td><span>AverageOfChildren</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI Scale Score Start</td><td></td><td><span>AverageOfChildren</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI Expected Growth</td><td></td><td><span>Sum</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI Actual Growth</td><td></td><td><span>Sum</span></td></tr>
+<tr><td>Istation</td><td>Student Istation Assessments</td><td>MoM % Students Meeting Expected Growth</td><td>Categorize by Month to see data</td><td><span title="IIF(
+IsEmpty
+(
+ ([Date].[Month Name].CurrentMember, [Monthly % Students Meeting Expected Growth])
+)
+OR 
+IsEmpty
+(
+ ([Date].[Month Name].PrevMember, [Monthly % Students Meeting Expected Growth])
+)
+, NULL
+, ([Date].[Month Name].CurrentMember, [Monthly % Students Meeting Expected Growth]) - ([Date].[Month Name].PrevMember, [Monthly % Students Meeting Expected Growth]))">Calculated measure</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI Student Count</td><td></td><td><span title="[Measures].[Smi Student Count Internal]">Calculated measure</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI % Students Meeting Expected Growth</td><td></td><td><span title="DIVIDE([Smi # Students Meeting Expected Growth],[Measures].[Smi Student Count Internal])">Calculated measure</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI % Students not Meeting Expected Growth</td><td></td><td><span title="DIVIDE([Smi # Students not Meeting Expected Growth],[Measures].[Smi Student Count Internal])">Calculated measure</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI # Students Meeting Expected Growth</td><td></td><td><span title="(
+     IIF([Student].[Student].CurrentMember is [Student].[Student].[All]     
+	 ,Sum(existing [Student].[Internal Student Key].[Internal Student Key], [Measures].[Smi Summator])
+     ,[Measures].[Smi Summator])
+)">Calculated measure</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI # Students not Meeting Expected Growth</td><td></td><td><span title="(   
+IIF([Student].[Student].CurrentMember is [Student].[Student].[All]      
+	 ,Sum(existing [Student].[Internal Student Key].[Internal Student Key], [Measures].[Smi Not Meeting Growth Summator])
+     ,[Measures].[Smi Not Meeting Growth Summator])
+)">Calculated measure</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI Aggr # Students Meeting  Expected Growth</td><td></td><td><span title="(
+     IIF([Student].[Student].CurrentMember is [Student].[Student].[All]     
+	 ,Sum(existing [Student].[Internal Student Key].[Internal Student Key], [Measures].[Smi Aggregated Summator])
+     ,[Measures].[Smi Aggregated Summator])
+)">Calculated measure</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI Aggr % Students Meeting Expected Growth</td><td></td><td><span title="DIVIDE([Measures].[SMI Aggr # Students Meeting  Expected Growth], [Measures].[Smi Student Count Internal])">Calculated measure</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI Aggr # Students Not Meeting  Expected Growth</td><td></td><td><span title="(
+     IIF([Student].[Student].CurrentMember is [Student].[Student].[All]     
+	 ,Sum(existing [Student].[Internal Student Key].[Internal Student Key], [SMI Aggr. Not Meeting Growth Summator])
+     ,[Measures].[SMI Aggr. Not Meeting Growth Summator])
+)">Calculated measure</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI Aggr % Students Not Meeting Expected Growth</td><td></td><td><span title="DIVIDE([Measures].[SMI Aggr # Students Not Meeting  Expected Growth], [Measures].[Smi Student Count Internal])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Enrollment</td><td>Employee Count</td><td></td><td><span title="[Measures].[Employee Enrollment]">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Top Enrollment</td><td>Top Enrollment</td><td></td><td><span>DistinctCount</span></td></tr>
+<tr><td>Student Activity</td><td>Transfer Requests</td><td>Transfer Request Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>SMI</td><td>SMI Assessments</td><td>SMI Period over Period % Students Meeting Expected Growth</td><td></td><td><span title="IIF(
+IsEmpty
+(
+ ([SMI Test Period].[SMI Test Period].CurrentMember, [SMI % Students Meeting Expected Growth])
+)
+OR 
+IsEmpty
+(
+ ([SMI Test Period].[SMI Test Period].PrevMember, [SMI % Students Meeting Expected Growth])
+)
+, NULL
+, ([SMI Test Period].[SMI Test Period].CurrentMember, [SMI % Students Meeting Expected Growth]) - ([SMI Test Period].[SMI Test Period].PrevMember, [SMI % Students Meeting Expected Growth]))">Calculated measure</span></td></tr>
+<tr><td>STAAR</td><td>State Assessment Requirements</td><td>Student EOC Result</td><td></td><td><span>Count</span></td></tr>
+<tr><td>STAAR</td><td>Student STAAR EOC</td><td>Student STAAR EOC Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>STAAR</td><td>Student STAAR EOC</td><td>Average Scale Score</td><td></td><td><span title="DIVIDE([Measures].[Sum Scale Score], [Measures].[Student STAAR EOC Count])">Calculated measure</span></td></tr>
+<tr><td>STAAR</td><td>Student STAAR EOC</td><td>Average Raw Score</td><td></td><td><span title="DIVIDE([Measures].[Sum Raw Score], [Measures].[Student STAAR EOC Count])">Calculated measure</span></td></tr>
+<tr><td>STAAR</td><td>Student STAAR EOC</td><td>% Below Level II Performance</td><td></td><td><span title="DIVIDE
+   (
+	  ([Measures].[Student STAAR EOC Count], [STAAR Test Detail].[Level 2 Performance].&[Did not Meet]) 	
+      ,[Measures].[Level II Performance Assessments]
+   )">Calculated measure</span></td></tr>
+<tr><td>STAAR</td><td>Student STAAR EOC</td><td>% Level I but not Level II</td><td></td><td><span title="IIF([School Year].[School Year].CurrentMember.UniqueName = '[School Year].[School Year].&[115]', NULL,
+DIVIDE(([Measures].[Student STAAR EOC Count], [STAAR Test Detail].[Level 1 Performance].&[Met], [STAAR Test Detail].[Level 2 Performance].&[Did not Meet]),[Measures].[Student STAAR EOC Count])
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Employees per Student</td><td></td><td><span title="DIVIDE([Measures].[Employee Count], [Measures].[Average Enrollment])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Number of Students per Employee</td><td></td><td><span title="DIVIDE([Measures].[Average Enrollment], [Measures].[Employee Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Number of Students per Teacher</td><td></td><td><span title="DIVIDE([Measures].[Average Enrollment], [Measures].[HR Teacher Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td># Students per Teacher</td><td></td><td><span title="DIVIDE([Measures].[Average Enrollment], [Measures].[Teacher Count])">Calculated measure</span></td></tr>
+<tr><td>STAAR</td><td>Student STAAR EOC</td><td>% Level II but not Level III</td><td></td><td><span title="DIVIDE(
+([Measures].[Student STAAR EOC Count], [STAAR Test Detail].[Level 2 Performance].&[Met], [STAAR Test Detail].[Level 3 Performance].&[Did not Meet])
+,[Measures].[Level II Performance Assessments]
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Latest Membership</td><td>Last Membership</td><td><span>LastNonEmpty</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Latest Enrollment</td><td>Average Enrollment</td><td><span>LastNonEmpty</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Average Enrollment</td><td>Shows average student enrollment per school day</td><td><span>AverageOfChildren</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Average Membership</td><td>Shows average student membership value per school day</td><td><span>AverageOfChildren</span></td></tr>
+<tr><td>STAAR</td><td>Student STAAR EOC</td><td>% Met Level II Performance</td><td></td><td><span title="DIVIDE(
+([Measures].[Student STAAR EOC Count], [STAAR Test Detail].[Level 2 Performance].&[Met])
+,[Measures].[Level II Performance Assessments]
+)">Calculated measure</span></td></tr>
+<tr><td>STAAR</td><td>Student STAAR EOC</td><td>% Level III: Advanced</td><td></td><td><span title="DIVIDE
+   (
+	  ([Measures].[Student STAAR EOC Count], [STAAR Test Detail].[Level 3 Performance].&[Met]) 	
+      ,[Measures].[Level III Performance Assessments]
+   )">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>PEIMS Fall Submission</td><td></td><td><span title="([Measures].[Latest Enrollment], [Date].[PEIMS Fall Submission Flag].&[1])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Attendance Ratio</td><td></td><td><span title="(
+   ([Attendance Type].[Absent Flag].&[False], [Measures].[Overall Attendance Count])/ [Measures].[Overall Attendance Count]
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>ADA Membership</td><td></td><td><span title="((
+ [Measures].[Overall Membership Value],
+ [Attendance Type].[ADA Flag].&[False]
+)
+/
+[Measures].[Overall Attendance Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>ADA Enrollment</td><td></td><td><span title="(
+ [Measures].[Overall Attendance Count],
+ [Attendance Type].[ADA Flag].&[False]
+)
+/
+[Measures].[Overall Attendance Count]">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>No Truancy Ratio</td><td></td><td><span title="IIF([Measures].[Overall Attendance Count] = 0, NULL,
+(   
+ (
+   [Attendance Type].[Truancy Flag].&[False],
+   [Measures].[Overall Attendance Count]
+ )
+  /
+(  
+  [Attendance Type].[Truancy Flag].[All],
+  [Measures].[Overall Attendance Count]
+ )
+)
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Ratio Over Truancy</td><td></td><td><span title="IIF([Measures].[Overall Attendance Count] = 0, NULL,
+(   
+ (   
+   [Measures].[Overall Attendance Count]
+ )
+  /
+(  
+  [Attendance Type].[Truancy Flag].[All],
+  [Measures].[Overall Attendance Count]   
+ )
+)
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Membership Ratio Over Enrollment</td><td></td><td><span title="Case
+    When IsEmpty( [Measures].[Overall Attendance Count] ) 
+    Then 0
+    Else ( [Student].[Race].CurrentMember,
+           Measures.[Overall Membership Value]) /
+         ( [Student].[Race].[All], 
+           [Measures].[Overall Attendance Count] )
+    End">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>ADA Count</td><td></td><td><span title="( 
+   [Attendance Type].[ADA Flag].&[False]
+   ,Measures.[Overall Membership Value]  
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Average ADA Count</td><td></td><td><span title="( 
+   [Attendance Type].[ADA Flag].&[False]
+   ,[Measures].[Average Membership] 
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Absence Count</td><td></td><td><span title="(
+
+ [Attendance Type].[Absent Flag].&[True]
+   ,[Measures].[Overall Attendance Count] 
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Absences per Student</td><td></td><td><span title="DIVIDE([Measures].[Absence Count], [Measures].[Students with Absences Regardless of Enrollment])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Average Daily Absences</td><td></td><td><span title="(
+ [Attendance Type].[Absent Flag].&[True]
+  ,[Measures].[Average Enrollment] 
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Attendance Count</td><td></td><td><span title="(
+
+ [Attendance Type].[Absent Flag].&[False]
+   ,[Measures].[Overall Attendance Count] 
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Average Daily Attendance</td><td></td><td><span title="(
+  [Attendance Type].[Absent Flag].&[False]
+   ,[Measures].[Average Enrollment] 
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Attendance</td><td>Students with Absences</td><td></td><td><span title="Sum  
+(
+   EXISTS(existing [Student].[Student].[Student],[MostRecentAttendanceDay], "Attendance")
+   , 
+   Iif(([Measures].[Absence Count]) >0, 1,NULL)
+  )">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budget Amendments</td><td>Amendment Amount</td><td></td><td><span>Sum</span></td></tr>
+<tr><td>Student Activity</td><td>Budget Amendments</td><td>Budget Amendment Amount per Student</td><td></td><td><span title="Case
+    When IsEmpty([Measures].[Enrollment Per Financial Unit]) 
+         Then NULL    
+    Else (DIVIDE([Measures].[Amendment Amount],[Measures].[Enrollment Per Financial Unit]) )
+End">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Original Budget Amount</td><td></td><td><span>Sum</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Actual Budget Amount</td><td></td><td><span>Sum</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Actual Budget Amount per Student</td><td></td><td><span title="Case
+    When IsEmpty([Measures].[Enrollment Per Financial Unit]) 
+         Then NULL    
+    Else (DIVIDE([Measures].[Actual Budget Amount],[Measures].[Enrollment Per Financial Unit]) )
+   End">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Original Expenditure Amount</td><td></td><td><span title="([Function].[Revenue Placeholder Flag].&[0], [Measures].[Original Budget Amount])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Original Revenue Amount</td><td></td><td><span title="([Function].[Revenue Placeholder Flag].&[1], [Measures].[Original Budget Amount]) * -1">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Actual Revenue Amount</td><td></td><td><span title="([Function].[Revenue Placeholder Flag].&[1], [Measures].[Actual Budget Amount]) * -1">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Actual Expenditure Amount</td><td></td><td><span title="([Function].[Revenue Placeholder Flag].&[0], [Measures].[Actual Budget Amount])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Revised Budget Amount</td><td></td><td><span title="[Measures].[Original Budget Amount] + [Measures].[Amendment Amount]">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Certifications</td><td>Employee Certification Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Enrollment</td><td>Average Employee Enrollment</td><td></td><td><span>AverageOfChildren</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Enrollment</td><td>Employee Left District</td><td></td><td><span>Sum</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Revised Budget Amount per Student</td><td></td><td><span title="Case
+    When IsEmpty([Measures].[Enrollment Per Financial Unit]) 
+         Then NULL    
+    Else (DIVIDE([Measures].[Revised Budget Amount],[Measures].[Enrollment Per Financial Unit]) )
+End">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Revised Budget Amount per Employee</td><td></td><td><span title="(DIVIDE([Measures].[Revised Budget Amount],[Measures].[Employee Count]) )">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Original Budget Amount per Student</td><td></td><td><span title="Case
+    When IsEmpty([Measures].[Enrollment Per Financial Unit]) 
+         Then NULL    
+    Else (DIVIDE([Measures].[Original Budget Amount],[Measures].[Enrollment Per Financial Unit]) )
+End">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Actual Expenditure Amount per Student</td><td></td><td><span title="Case
+    When IsEmpty([Measures].[Enrollment Per Financial Unit]) 
+         Then NULL    
+    Else (([Measures].[Actual Expenditure Amount]/[Measures].[Enrollment Per Financial Unit]) )
+   End">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Actual Revenue Amount per Student</td><td></td><td><span title="Case
+    When IsEmpty([Measures].[Enrollment Per Financial Unit]) 
+         Then NULL    
+    Else (([Measures].[Actual Revenue Amount]/[Measures].[Enrollment Per Financial Unit]) )
+   End">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Budgets</td><td>Instructional Budget per Student</td><td></td><td><span title="([Function].[Function Group].&[1],[Measures].[Revised Budget Amount per Student])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Certifications</td><td>Certified Employees</td><td></td><td><span title="SUM(
+   [Employee].[Employee].[Employee], 
+   Iif([Measures].[Employee Certification Count] > 0,1,NULL))">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Enrollment</td><td>HR Teacher Count</td><td></td><td><span title="IIF ([Job Class].[Bargaining Unit].CurrentMember is [Job Class].[Bargaining Unit].[All]
+, ([Measures].[HR Employee Count Internal], [Job Class].[Bargaining Unit].&[3])
+, IIF ([Job Class].[Bargaining Unit].CurrentMember is [Job Class].[Bargaining Unit].&[3],
+  [Measures].[HR Employee Count Internal], NULL)
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Enrollment</td><td>Employee Diversity Variance</td><td></td><td><span title="(
+ [Measures].[StudentEthnicityRatio]-[Measures].[EmployeeEthnicityRatio]
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Enrollment</td><td>Employee Count at School Year End</td><td></td><td><span title="([Measures].[Employee Count], [Date].[Is School Year End Date].&[True])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Enrollment</td><td>Employee Count at School Year Start</td><td></td><td><span title="([Measures].[Employee Count], [Date].[Is School Year Start Date].&[True])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Enrollment</td><td>Employee Retention</td><td></td><td><span title="IIF([School Year].[School Year].CurrentMember is [School Year].[School Year].[All],
+								DIVIDE([Measures].[Employee Count]-([School Year].[School Year].CurrentMember.LastChild, [Measures].[Employee Left District]),[Measures].[Employee Count]),
+								DIVIDE([Measures].[Employee Count]-[Measures].[Employee Left District],[Measures].[Employee Count])
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Enrollment</td><td>Employee Turnover</td><td></td><td><span title="1 - [Measures].[Employee Retention]">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Enrollment</td><td>New Employees Count</td><td></td><td><span title="([Employee Enrollment Details].[Is New In Current School Year].&[True],[Measures].[Employee Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Employee Job Classes</td><td>Employee Job Class Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Grading Period Grades</td><td>Grading Period Grade Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Grading Period Grades</td><td>Average Raw Grade</td><td></td><td><span title="DIVIDE(([Measures].[Numeric Grade Value],[Grade Scale].[Numeric Grade].&[1]) , ([Measures].[Grading Period Grade Count],[Grade Scale].[Numeric Grade].&[1]))">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Grading Period Grades</td><td>Passed Ratio</td><td></td><td><span title="(   
+( 
+ [Measures].[Grading Period Grade Count],
+ [Grading Period Grade Result].[Grading Period Grade Met Flag].&[1] 
+)
+/
+[Measures].[Grading Period Grade Count]
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Grading Period Grades</td><td>Failed Ratio</td><td></td><td><span title="(   
+( 
+ [Measures].[Grading Period Grade Count],
+ [Grading Period Grade Result].[Grading Period Grade Met Flag].&[0] 
+)
+/
+[Measures].[Grading Period Grade Count]
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Grading Period Grades</td><td>Failed Grading Period Grade Count</td><td></td><td><span title="(   
+ 
+ [Measures].[Grading Period Grade Count],
+ [Grading Period Grade Result].[Grading Period Grade Met Flag].&[0] 
+
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Incidents</td><td>Incident Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Purchase Order Details</td><td>PO Detail Amount</td><td></td><td><span>Sum</span></td></tr>
+<tr><td>Student Activity</td><td>Purchase Order Details</td><td>PO Detail Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Purchase Orders</td><td>Purchase Order Amount</td><td></td><td><span>Sum</span></td></tr>
+<tr><td>Student Activity</td><td>Purchase Orders</td><td>Purchase Order Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Purchase Orders</td><td>Open Purchase Order Amount</td><td></td><td><span title="Case
+    When ([Purchase Order Source].[Purchase Order Source].CURRENTMEMBER is [Purchase Order Source].[Purchase Order Source].[All]) 
+         Then (
+                -- PO Entry + PO Maintenance - ABS(PO Liquidation)
+                ([Purchase Order Source].[Purchase Order Source].&[2], [Measures].[PO Detail Amount])
+                +
+                ([Purchase Order Source].[Purchase Order Source].&[1], [Measures].[PO Detail Amount])
+                - 
+                Abs(([Purchase Order Source].[Purchase Order Source].&[4], [Measures].[PO Detail Amount]))
+              )
+    Else NULL
+End">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Purchase Orders</td><td>Open Purchase Order Count</td><td></td><td><span title="([Purchase Order Details].[Open Flag].&[1],[Measures].[Purchase Order Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Purchase Orders</td><td>Purchase Order Invoiced Amount</td><td></td><td><span title="Case
+    When ([Purchase Order Source].[Purchase Order Source].CURRENTMEMBER is [Purchase Order Source].[Purchase Order Source].[All]) 
+         Then ([Purchase Order Source].[Purchase Order Source].&[5], [Measures].[PO Detail Amount])
+    Else NULL
+End">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Purchase Orders</td><td>Purchase Order Paid Amount</td><td></td><td><span title="Case
+    When ([Purchase Order Source].[Purchase Order Source].CURRENTMEMBER is [Purchase Order Source].[Purchase Order Source].[All]) 
+         Then ( ([Purchase Order Source].[Purchase Order Source].&[4], [Measures].[PO Detail Amount]) * -1)
+    Else NULL
+End">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Requisitions</td><td>Requisition Amount</td><td></td><td><span>Sum</span></td></tr>
+<tr><td>Student Activity</td><td>Requisitions</td><td>Requisition Count</td><td></td><td><span title="[Measures].[Requisition Distinct Count]">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>School Ratings</td><td>School Rating Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Student Actions</td><td>Student Action Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Student Actions</td><td>Actual Action Days</td><td></td><td><span>Sum</span></td></tr>
+<tr><td>Student Activity</td><td>Student Actions</td><td>Student OSS per School Day</td><td></td><td><span title="Divide(([Measures].[Actual Action Days],[Action Type].[Out Of School Suspension Flag].&[True]),[Measures].[Overall Attendance Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Actions</td><td>Student ISS per School Day</td><td></td><td><span title="Divide(([Measures].[Actual Action Days],[Action Type].[Actions].[Category].&[IN SCHOOL SUSPENSION]&[1]),[Measures].[Overall Attendance Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Assessments</td><td>Student Assessment Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Student Assessments</td><td>Met State Assessment</td><td></td><td><span title="(   
+iif (IsEmpty([Measures].[Student Assessment Count]), NULL, 
+       ( 
+        ( 
+         [Measures].[Student Assessment Count],
+         [Assessment Result].[Assessment Result].[All].[Met] 
+        )
+        /
+        [Measures].[Student Assessment Count]
+        )
+)
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Assessments</td><td>Exceeded State Assessment</td><td></td><td><span title="(   
+( 
+ [Measures].[Student Assessment Count],
+ [Assessment Result].[Assessment Result].&[E] 
+)
+/
+[Measures].[Student Assessment Count]
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Assessments</td><td>Met But Not Exceeded State Assessment</td><td></td><td><span title="(   
+( 
+ [Measures].[Student Assessment Count],
+ [Assessment Result].[Assessment Result].&[M] 
+)
+/
+[Measures].[Student Assessment Count]
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Course Sections</td><td>Course Section Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Student Infractions</td><td>Student Infraction Count</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Student Program Placement</td><td>Student Program Placement</td><td></td><td><span>Count</span></td></tr>
+<tr><td>Student Activity</td><td>Student Assessments</td><td>Did not Meet State Assessment</td><td></td><td><span title="(   
+    Case
+    When [Measures].[Met State Assessment] = 1.0  
+    Then null
+    Else iif (isempty([Measures].[Student Assessment Count]), null, 1-[Measures].[Met State Assessment])
+    End  
+)">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Course Sections</td><td>Teacher Count</td><td></td><td><span title="SUM(
+   [Course Section].[Teacher].[Teacher], 
+   IIF([Measures].[Course Section Count] >0, 1, NULL))">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Course Sections</td><td>Average Section Enrollment</td><td></td><td><span title="Divide([Measures].[Course Section Student Enrollment],[Measures].[Course Section Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Infractions</td><td>Students with no Infractions</td><td></td><td><span title="Sum(
+   EXISTS([Student].[Student].[Student],, "Attendance")
+   , 
+   Iif([Measures].[Student Infraction Count] = 0, 1,NULL))">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Infractions</td><td>Students with 2 Infractions</td><td></td><td><span title="SUM(
+   [Student].[Student].[Student], 
+   Iif([Measures].[Student Infraction Count] = 2,1,NULL))">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Infractions</td><td>Students with 3 or more Infractions</td><td></td><td><span title="SUM(
+   [Student].[Student].[Student], 
+   Iif([Measures].[Student Infraction Count] >= 3,1,NULL))">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Infractions</td><td>Out of School Suspensions</td><td></td><td><span title="([Action Type].[Out Of School Suspension Flag].&[True],[Measures].[Student Infraction Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Infractions</td><td>Infractions per Student</td><td></td><td><span title="Case
+    When IsEmpty([Measures].[Latest Enrollment]) 
+    Then Null 
+
+    When [Measures].[Latest Enrollment] = 0
+    Then NULL        
+
+    When IsEmpty([Measures].[Student Infraction Count]) 
+    Then Null
+
+    When ([School Year].[School Year].CURRENTMEMBER is [School Year].[School Year].[All]) 
+    Then
+        [Measures].[Student Infraction Count]/[Measures].[Latest Enrollment] / [Measures].[School Year Count]
+    Else (         
+           [Measures].[Student Infraction Count]/[Measures].[Latest Enrollment]    
+         )
+End">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Student Infractions</td><td>In School Suspensions</td><td></td><td><span title="([Action Type].[Actions].[Category].&[IN SCHOOL SUSPENSION]&[1],[Measures].[Student Infraction Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Transfer Requests</td><td>Recommended Transfer Requests</td><td></td><td><span title="([Transfer Request Detail].[Recommended Flag].&[True],[Measures].[Transfer Request Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Transfer Requests</td><td>Approved Transfer Requests</td><td></td><td><span title="([Transfer Request Detail].[Transfer Request Status].&[5],[Measures].[Transfer Request Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Transfer Requests</td><td>Applicant Employee Count</td><td></td><td><span title="[Measures].[Applicant Employee Distinct Count]">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Transfer Requests</td><td>Source Location Count</td><td></td><td><span title="[Measures].[Source Location Distinct Count]">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Transfer Requests</td><td>% of Employees Submitting Requests</td><td></td><td><span title="DIVIDE([Measures].[Applicant Employee Count], [Measures].[Teacher Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Transfer Requests</td><td>Average Number of Requests Submitted Per Employee</td><td></td><td><span title="DIVIDE([Measures].[Transfer Request Count],[Measures].[Applicant Employee Count])">Calculated measure</span></td></tr>
+<tr><td>Student Activity</td><td>Transfer Requests</td><td>Average Number of Requests Approved Per Employee</td><td></td><td><span title="DIVIDE([Measures].[Approved Transfer Requests], [Measures].[Applicant Employee Count])">Calculated measure</span></td></tr>

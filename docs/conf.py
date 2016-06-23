@@ -346,12 +346,15 @@ texinfo_documents = [
 # texinfo_no_detailmenu = False
 
 github_doc_root = 'https://github.com/K12Dynamics/D3/tree/master/docs'
-def setup(app):
+def setup_recommmonmark(app):
     app.add_config_value('recommonmark_config', {
             'url_resolver': lambda url: github_doc_root + url,
             'auto_toc_tree_section': 'Contents',
             }, True)
     app.add_transform(AutoStructify)
+
+def setup(app):
+    setup_recommonmark(app)
 
 # -- ReadTheDoc requirements and local template generation---------------------
 
@@ -363,8 +366,9 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
     # Override default css to get a larger width for local build
-    def setupx(app):
+    def setup(app):
         #app.add_javascript("custom.js")
+        setup_recommmonmark(app)
         app.add_stylesheet('theme_override.css')
 else:
     # Override default css to get a larger width for ReadTheDoc build

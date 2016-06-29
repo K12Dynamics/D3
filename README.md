@@ -10,7 +10,7 @@ The most straightforward way to edit this documentation directly on github.com.
 
 All documentation files are written in [CommonMark](http://commonmark.org/help/) markdown.
 
-For some features not supported in markdown, it is necessary to embed reStructuredText directly. The [Recommonmark](http://recommonmark.readthedocs.io/en/latest/index.html) documentation explains how to use the this and other features found in Sphinx.
+For some features not supported in markdown, it is necessary to embed reStructuredText directly. The [Recommonmark](http://recommonmark.readthedocs.io/en/latest/index.html) documentation explains how to use the this and other features found in Sphinx (the documentation compiler).
 
 Setting up locally
 ---------------------

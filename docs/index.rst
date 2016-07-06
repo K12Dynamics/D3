@@ -15,20 +15,20 @@ Dynamic District Dashboard (D3) is a dashboard-style software system that gather
 
 The main documentation for D3 is organized into the following sections:
 
-* :ref:`quickstart-section` - *New users should begin here*
+* :ref:`getting-started-section` - *New users should begin here*
 * :ref:`features-section`
 * :ref:`administration-section`
 * :ref:`technical-section`
 
-.. _quickstart-section:
+.. _getting-started-section:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Quick Start
+   :caption: Getting Started
 
-   quickstart/getting-started
-   quickstart/tutorials
-   quickstart/videos
+   getting-started/quickstart
+   getting-started/how-do-i
+   getting-started/videos
 
 .. _features-section:
 
@@ -36,7 +36,15 @@ The main documentation for D3 is organized into the following sections:
    :maxdepth: 2
    :caption: Features
 
-   features/index
+   features/favorites
+   features/library
+   features/charts-and-dashboards
+   features/scorecards
+   features/explorer
+   features/watchlists
+   features/kpis
+   features/sharing
+   features/settings
 
 .. _administration-section:
 
@@ -45,6 +53,7 @@ The main documentation for D3 is organized into the following sections:
    :caption: Administration
    
    administration/index
+   administration/impersonation
    administration/custom-reporting
    
 .. _technical-section:
@@ -63,7 +72,7 @@ The main documentation for D3 is organized into the following sections:
    :maxdepth: 2
    :caption: About D3
 
-   about/roadmap
+   about/vision-roadmap
    about/releases
    about/index
    

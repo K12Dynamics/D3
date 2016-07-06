@@ -1,8 +1,14 @@
-# Getting Started
+```eval_rst
+.. _getting-started-quickstart:
+```
+
+# Quickstart
 
 ## Login
 
-D3 requires every user to log in. For users coming in via the district’s secure portal, the login credentials entered at the district portal will be passed through automatically to D3 using single sign on. However, for users navigating directly to D3, the login screen will be displayed (depicted below) and the user must enter a valid user name and password for the given school district organization. 
+D3 requires every user to log in. For users coming in via the district’s secure portal, the login credentials entered at the district portal 
+will be passed through automatically to D3 using single sign on. However, for users navigating directly to D3, the login screen will be 
+displayed (depicted below) and the user must enter a valid user name and password for the given school district organization. 
 
 ![Login screen](img/login.png)
 
@@ -51,8 +57,7 @@ The main area of the navigation panel is a tabbed interface, which provides acce
 The purpose of each tab is as follows:
 
 ```eval_rst
-* :ref:`Favorites <features-favorites>`: This is a unique view that allows you to collect your most used items for quick access.
-* :ref:`Favorites <features-favorites>`: This is a unique view that allows you to collect your most used items for quick access.
+* :ref:`Favorites <features-favorites>`: This is a unique view that allows you to quickly access your most used items.
 * :ref:`Library <features-library>`: Access dashboards, charts, and other items published to your organization as well as your personally created items.
 * :ref:`Scorecards <features-scorecards>`: View many measures at once for a single entity,such as a school or student.
 * :ref:`Data Explorer <features-explorations>`: Analyze and drill-down into your data dynamically using this visual explorer.
@@ -68,6 +73,14 @@ The purpose of each tab is as follows:
 Also, at the bottom of this panel you will see the name of the currently logged in user and a logout button.
 
 ![Bottom panel info](img/navigating-footer.png)
+
+## Using Quick Search
+
+Activate the quick search feature from the header bar to quickly locate items in D3.
+
+When activated, enter your search term, or choose from the pick lists of recent items and popular items.
+
+Results are returned in real-time as you type, displaying categorized results of matching items. Click any item to activate it.
 
 ## Sidebar Actions
 

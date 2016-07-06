@@ -9,3 +9,50 @@
 table.docutils td > div.line-block {
     margin-left: 0;
 }
+
+.rst-content img { 
+    border: 1px solid #aaa;
+    padding: 4px;
+}
+
+.label {
+    display: inline-block;
+    padding: .3em .5em;
+    font-size: 75%;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    border-radius: .25em;
+    background-color: #777;
+    margin-right: 0.5em;
+    margin-top: 0.2em;
+}
+p .label {
+    font-size: 65%;
+}
+.label.new, p.new .label {
+    background-color: #5cd85c;
+}
+.label.new::before, p.new .label::before {
+    content: "NEW";
+}
+.label.fixed, p.fixed .label {
+    background-color: #337ab7;
+}
+.label.fixed::before, p.fixed .label::before {
+    content: "FIXED";   
+}
+.label.upcoming, p.upcoming .label {
+    background-color: #f0ad4e;
+}
+.label.upcoming::before, p.upcoming .label::before {
+    content: "IN PROGRESS";   
+}
+p.new.featured {
+    font-weight: bold;
+}
+p.fixed, p.new, p.upcoming {
+    font-size: 1.3em;
+}

@@ -1,3 +1,0 @@
-Roadmap
-============
-We operate in a dynamic environment...

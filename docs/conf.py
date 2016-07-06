@@ -18,6 +18,7 @@ import shlex
 import sphinx_rtd_theme
 import recommonmark
 
+import recommonmark
 from recommonmark.transform import AutoStructify
 from recommonmark.parser import CommonMarkParser
 

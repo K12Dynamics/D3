@@ -346,7 +346,7 @@ texinfo_documents = [
 # texinfo_no_detailmenu = False
 
 github_doc_root = 'https://github.com/K12Dynamics/D3/tree/master/docs'
-def setup_recommmonmark(app):
+def setup_recommonmark(app):
     app.add_config_value('recommonmark_config', {
             'url_resolver': lambda url: github_doc_root + url,
             'auto_toc_tree_section': 'Contents',
@@ -368,7 +368,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     # Override default css to get a larger width for local build
     def setup(app):
         #app.add_javascript("custom.js")
-        setup_recommmonmark(app)
+        setup_recommonmark(app)
         app.add_stylesheet('theme_override.css')
 else:
     # Override default css to get a larger width for ReadTheDoc build

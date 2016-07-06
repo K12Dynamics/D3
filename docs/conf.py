@@ -18,6 +18,7 @@ import shlex
 import sphinx_rtd_theme
 import recommonmark
 
+sys.path.insert(0, os.path.abspath('..'))
 from recommonmark.transform import AutoStructify
 from recommonmark.parser import CommonMarkParser
 

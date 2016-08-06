@@ -33,6 +33,7 @@ Dashboard layout is also configurable by the user: users can modify the layout o
 
 ### Dashboard Actions
 Users can perform various actions on dashboards. These actions are available from the Actions Menu which can be activated by clicking the double left arrow icon, located at the top right of the D3 screen. Actions applicable to the dashboard as a whole are enabled as shown below; disabled actions are reserved for selected charts only (to learn more about these, see Working with D3 Charts section).
+
 ![dashboardactions](img/dashboardactions.png)
 
 

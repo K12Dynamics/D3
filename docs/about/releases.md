@@ -6,11 +6,9 @@ New features we're working on for upcoming releases include:
 
 <p class="upcoming"><span class="label"></span>Color Themes</p>
 
-<p class="upcoming"><span class="label"></span>Watchlist Management Redesign</p>
+<p class="upcoming"><span class="label"></span>Watch List Management Redesign</p>
 
 <p class="upcoming"><span class="label"></span>Toggle Measure Visibility in Charts</p>
-
-<p class="upcoming"><span class="label"></span>Ability to Specify Ranges when Filtering Date Category Items</p>
 
 <p class="upcoming"><span class="label"></span>Ability to Specify Ranges when Filtering Date Category Items</p>
 
@@ -124,7 +122,7 @@ Teachers can now enjoy charts and dashboards tailored to show results from the s
 <p class="fixed"><span class="label"></span>Unable to explore scorecards that have multiple measures (#2028)</p>
 <p class="fixed"><span class="label"></span>The home screen is shown after login expiration rather than the item specified in the URL (#2023)</p>
 <p class="fixed"><span class="label"></span>Rename EOC Tracker to Student Tracker (#1986)</p>
-<p class="fixed"><span class="label"></span>Wrap long filter selection names to multple lines for improved readability (#1982)</p>
+<p class="fixed"><span class="label"></span>Wrap long filter selection names to multiple lines for improved readability (#1982)</p>
 <p class="fixed"><span class="label"></span>Vertical scrollbar appears in chart data view even if it's not needed (#1940)</p>
 <p class="fixed"><span class="label"></span>Do not show empty folders in library. This is needed for the teacher role (#1963)</p>
 
@@ -149,13 +147,13 @@ For more information, read our :ref:`User Impersonation <admin-impersonation>` t
 
 We've made some enhancements to the data we collect about disciplinary information. We now capture the referring party for each 
 discipline incident and also the administration assigned for managing each associated discipline action. Plus, we now capture the 
-time of day that discipline incidents are reported so you can analyze what types of incidents are occurring at diffent times of the day.  
+time of day that discipline incidents are reported so you can analyze what types of incidents are occurring at different times of the day.  
 
 We have new charts to show this information, plus it's available in the data explorer so you can create your own charts too.
 
 <p class="fixed"><span class="label"></span>Loss of data view in bottom exploration level (#1868)</p>
 <p class="fixed"><span class="label"></span>Display a message indicating when there are no watch lists available (#1753)</p>
-<p class="fixed"><span class="label"></span>Show busy indicator while generationg dashboard export to Excel or image (#973)</p>
+<p class="fixed"><span class="label"></span>Show busy indicator while generating dashboard export to Excel or image (#973)</p>
 <p class="fixed"><span class="label"></span>Infographic displays incorrectly when there is no All School Year column (#1816)</p>
 <p class="fixed"><span class="label"></span>Error occurs when deleting chart from My Items (#1843)</p>
 
@@ -167,14 +165,14 @@ We have new charts to show this information, plus it's available in the data exp
 
 You can now access a student's scorecard directly from a watch list.
 
-The display of watch list results also received a facelist with a new grid display and the addition of pagination controls.
+The display of watch list results also received a facelift with a new grid display and the addition of pagination controls.
 
 <p class="new featured"><span class="label"></span>Introduce Feature Toggle</p>
 
 We've introduced an internal feature toggle capability to allow us to turn on features currently under development for
 review by certain districts or users. This helps us gather feedback from real world users during development.
 
-<p class="fixed"><span class="label"></span>Include course section and teacher categores in popular results (#1850)</p>
+<p class="fixed"><span class="label"></span>Include course section and teacher categories in popular results (#1850)</p>
 <p class="fixed"><span class="label"></span>No data is displayed for second value in explorer (#1842)</p>
 <p class="fixed"><span class="label"></span>Remove All School Years column from the Enrollment score cards (#1802)</p>
 <p class="fixed"><span class="label"></span>Top n filter not applied to chart created from Explorer (#1801)</p>
@@ -194,8 +192,3 @@ As a bonus, the search screen also displays your more recently accessed items as
 <p class="fixed"><span class="label"></span>Layout issue in student enrollment grid (#1737)</p>
 <p class="fixed"><span class="label"></span>Cannot navigate backwards from quick search (#1677)</p>
 
-## Older Releases
-
-**Highlights from our earlier releases include:**
-
-TODO

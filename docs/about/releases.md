@@ -34,13 +34,9 @@ For our charts that display multiple measures, you now have the ability to selec
 
 <p class="new featured"><span class="label"></span>Ability to Specify Ranges when Filtering Date Category Items</p>
 
-Applying a filter in D3 requires selecting the individual member values to filter on. This works well in most cases, but not for dates. When filtering on a dates, the user invariably wants to specify a date range (or multiple date ranges). To address this, we improved our filtering user interface to provide a new experience when creating a date-based filter. You now pick a start date and end date (or you can leave one blank). You can even add additional date ranges if you need to.
+Applying a filter in D3 requires selecting the individual member values to filter on. This works well in most cases, but not for dates. When filtering on a date, the user invariably wants to specify a date range (or multiple date ranges). To address this, we improved our filtering user interface to provide a new experience when creating a date-based filter. You now pick a start date and end date (or you can leave one blank). You can even add additional date ranges if you need to.
 
 ![Date Filters](img/201608-date-filters.png)
-
-<p class="new featured"><span class="label"></span>Reset Color Customizations</p>
-
-A `Reset to default` button is now available on the color picker dialog. This provides a way for clear a customized color assignment. Access it from the sidebar legend by clicking `Change color`.
 
 <p class="new featured"><span class="label"></span>Auto Hide Legend Items</p>
 
@@ -49,9 +45,15 @@ When viewing charts contained within dashboards or within the Explorer, this can
 To resolve this, we now automatically hide the legend items from the chart area when needed for the chart to be easily legible.
 When legend items are hidden from the chart, you can still view this information by opening the sidebar.
 
+![Auto Hide Legend](img/201608-hide-legend.png)
+
+<p class="new featured"><span class="label"></span>Reset Custom Colors</p>
+
+A `Reset to default` button is now available on the color picker dialog. This provides a way to clear a customized color assignment. Access it from the sidebar legend by clicking `Change color`.
+
 <p class="new featured"><span class="label"></span>New Mouse Shortcut</p>
 
-When using a desktop computer, a new double-click shortcut is now available to quickly switch back to the dashboard view when viewing a maximized chart.
+When using a desktop computer, a new double-click shortcut is now available to quickly switch back to the dashboard view after viewing a maximized chart.
 
 <p class="fixed"><span class="label"></span>Only watch list owner should be able to edit watch list (#2479)</p>
 

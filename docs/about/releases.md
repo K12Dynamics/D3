@@ -26,6 +26,8 @@ Our search capabilities have always focused on ease-of-use. Just type a few lett
 
 ![Search Results](img/201608-search-results.png)
 
+Additionally, the search box will now also recognize student numbers, which provides a convenient  method for locating a student scorecard when you have the student number handy. 
+
 <p class="new featured"><span class="label"></span>Toggle Measure Visibility in Charts</p>
 
 For our charts that display multiple measures, you now have the ability to selectively hide or show each measure individually. The legend section of the sidebar was redesigned to support this. Previously, the legend items could be clicked to adjust their color. Now, clicking a legend item expands it to display a sub-menu of actions from which you can toggle the visibility or change the color.

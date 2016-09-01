@@ -4,15 +4,56 @@
 
 New features we're working on for upcoming releases include:
 
-<p class="upcoming"><span class="label"></span>Color Themes</p>
-
 <p class="upcoming"><span class="label"></span>Watch List Management Redesign</p>
 
-<p class="upcoming"><span class="label"></span>Toggle Measure Visibility in Charts</p>
+Work is proceeding at a breakneck pace on our new super-charged watch list management redesign. We expect to release it for general use next month. Major changes include:
 
-<p class="upcoming"><span class="label"></span>Ability to Specify Ranges when Filtering Date Category Items</p>
+* A brand new user experience that simplifies creation of watch lists.
+* Much more power in specifying criteria for matching students.
+* Ability to build point-based watch lists.
 
-<p class="upcoming"><span class="label"></span>Improvements to Search Capabilities</p>
+## August 2016 Release
+
+<p class="new featured"><span class="label"></span>New Color Themes</p>
+
+D3 has always used a crisp light theme designed for high usability with a clean, professional experience. We recognize though that some people prefer a darker screen,and people with visual impairments benefit from an increased contrast between colors. As a result, D3 is now available in three beautiful color themes: Light (the default), High Contrast, and Dark. Theme preferences are controlled from the settings area accessed from the main menu.
+
+![Color Themes](img/201608-themes.png)
+
+<p class="new featured"><span class="label"></span>Improvements to Search Capabilities</p>
+
+Our search capabilities have always focused on ease-of-use. Just type a few letters, and immediately see the top results categorized by the type of the item (e.g. dashboard, chart, scorecard, student, exploration). One limitation though, is that only the first 6 results for each item type were displayed. With this month's release, a `SEE MORE` button is now displayed underneath the initial results when applicable. Clicking the button will expand the view to show a complete listing of all matches. The results are organized by tabs. The first tab has all results organized alphabetically. The other tabs act as filters to show all results of a particular item type.
+
+![Search Results](img/201608-search-results.png)
+
+<p class="new featured"><span class="label"></span>Toggle Measure Visibility in Charts</p>
+
+For our charts that display multiple measures, you now have the ability to selectively hide or show each measure individually. The legend section of the sidebar was redesigned to support this. Previously, the legend items could be clicked to adjust their color. Now, clicking a legend item expands it to display a sub-menu of actions from which you can toggle the visibility or change the color.
+
+![Toggle Measure Visibility](img/201608-measure-visibility.png)
+
+<p class="new featured"><span class="label"></span>Ability to Specify Ranges when Filtering Date Category Items</p>
+
+Applying a filter in D3 requires selecting the individual member values to filter on. This works well in most cases, but not for dates. When filtering on a dates, the user invariably wants to specify a date range (or multiple date ranges). To address this, we improved our filtering user interface to provide a new experience when creating a date-based filter. You now pick a start date and end date (or you can leave one blank). You can even add additional date ranges if you need to.
+
+![Date Filters](img/201608-date-filters.png)
+
+<p class="new featured"><span class="label"></span>Reset Color Customizations</p>
+
+A `Reset to default` button is now available on the color picker dialog. This provides a way for clear a customized color assignment. Access it from the sidebar legend by clicking `Change color`.
+
+<p class="new featured"><span class="label"></span>Auto Hide Legend Items</p>
+
+A large number of legend items in charts reduces the available plot area of the chart significantly. 
+When viewing charts contained within dashboards or within the Explorer, this can lead to charts that are too hard to read. 
+To resolve this, we now automatically hide the legend items from the chart area when needed for the chart to be easily legible.
+When legend items are hidden from the chart, you can still view this information by opening the sidebar.
+
+<p class="new featured"><span class="label"></span>New Mouse Shortcut</p>
+
+When using a desktop computer, a new double-click shortcut is now available to quickly switch back to the dashboard view when viewing a maximized chart.
+
+<p class="fixed"><span class="label"></span>Only watch list owner should be able to edit watch list (#2479)</p>
 
 ## July 2016 Release
 

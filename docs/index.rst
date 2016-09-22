@@ -6,6 +6,7 @@
 .. image:: img/d3-logo-lg.png
    :align: right
    :scale: 50 %
+   :class: naked
 
 
 Welcome to D3's documentation!
@@ -72,7 +73,8 @@ The main documentation for D3 is organized into the following sections:
    :maxdepth: 2
    :caption: About D3
 
-   about/vision-roadmap
+   about/vision
+   about/roadmap
    about/releases
    about/index
    

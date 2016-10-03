@@ -1,15 +1,34 @@
+/*
+ * Apply D3 branding to sidebar
+ */
 .wy-side-nav-search {
     background-color: #e32526;
 }
 
+/*
+ * Increase width of content area
+ */
 .wy-nav-content {
     max-width: 1050px
 }
 
+/*
+ * Undo odd theme behavior that causes problems when paragraphs are used within lists
+ */
+.rst-content ol li p:last-child, .rst-content ul li p:last-child {
+    margin-bottom: 12px !important;
+}
+
+/*
+ * ???
+ */
 table.docutils td > div.line-block {
     margin-left: 0;
 }
 
+/*
+ * Automatically style images with a border
+ */
 .rst-content img { 
     border: 1px solid #aaa;
     padding: 4px;
@@ -19,6 +38,9 @@ table.docutils td > div.line-block {
     border-width: 0;
 }
 
+/*
+ * Paragraph labeling (for release notes primarily)
+ */
 .label {
     display: inline-block;
     padding: .3em .5em;
@@ -60,9 +82,38 @@ p.new.featured {
 p.fixed, p.new, p.upcoming {
     font-size: 1.3em;
 }
+
+/*
+ * Adjust heading sizes for greater contrast between sizes
+ */
 h1 {
-    font-size: 250%;
+    font-size: 300%;
 }
+
 h2 {
+    font-size: 200%;
+}
+
+h3 {
     font-size: 150%;
 }
+
+/*
+ * Task lists (e.g. "'How do I ..")
+ */
+ .task-title {
+     border-left: 10px solid #bd1f1f;
+     border-top: 1px solid #bd1f1f;
+     padding: 20px 0;
+     text-transform: uppercase;
+     padding-left: 14px;
+     font-size: 115%;
+     margin-bottom: 1em;
+     font-weight: bold;
+ }
+
+ .task-item {
+     font-weight: bold; 
+     font-size: 1.em;
+     color: #bd1f1f;
+ }

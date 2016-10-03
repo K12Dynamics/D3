@@ -38,10 +38,9 @@ The main documentation for D3 is organized into the following sections:
    :caption: Features
 
    features/favorites
-   features/library
-   features/charts-and-dashboards
+   features/chart-library
    features/scorecards
-   features/explorer
+   features/data-explorer
    features/watchlists
    features/kpis
    features/sharing

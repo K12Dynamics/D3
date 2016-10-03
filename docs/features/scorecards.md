@@ -1,5 +1,8 @@
+```eval_rst
 .. _features-scorecards:
-# Working with D3 Scorecards
+```
+
+# Scorecards
 In general, scorecards present information that allow observation and tracking of various activities against organizational goals. 
 D3 provides ISD, campus, student, and employee type metrics and a set of tools that optimize the presentation and analysis of scorecard information of each. D3 scorecards allow:
 

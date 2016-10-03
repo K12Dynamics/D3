@@ -29,7 +29,7 @@ D3 has a standard header bar at the top of the application from which all action
 
 From left-to-right, the purpose of each component in the toolbar is:
 
-1. Access the pull-out menu to open screens in D3.
+1. Access the main menu to open screens in D3.
 2. Go back to the previous screen (only visible when there is a previous screen to navigate back to).
 3. Title of the current screen.
 4. Quick search of all available D3 items (note: on mobile phones a magnifier glass icon is displayed instead of a text box).
@@ -41,7 +41,7 @@ Number 6 in the image above identifies the main content area that displays the c
 
 ## Navigating Around the App
 
-Click the "hamburger" icon to access the pull-out navigation panel, from which you can access all D3 visualization features.
+Click the "hamburger" icon to access the main menu, from which you can access all D3 visualization features.
 
 ![Hamburger icon](img/navigating-hamburger.png)
 

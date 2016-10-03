@@ -6,7 +6,9 @@
 
 The Favorites feature provides a way for each user to mark library items for quick access.
 
-Each favorite can be launch with just two clicks. First, click the pull-out menu icon. Your Favorites are automatically displayed as the first tab in the menu (identified by a star icon). Second, click a favorited item to launch it.
+Each favorite can be launch with just two clicks. First, click the main menu icon. Your Favorites are automatically displayed as the first tab in the menu (identified by a star icon). Second, click a favorited item to launch it.
+
+![Favorites example](img/favorites-example.png)
 
 Your favorites are organized in alphabetical order. 
 
@@ -16,4 +18,4 @@ Most items in D3 include an `Add to favorites` option in the sidebar. Clicking t
 
 If the item is already in your favorites, a `Remove from favorites` option will be available instead.
 
-Once you have identified an item as a favorite, the addition option `Set as home screen` become available. Clicking this will cause the favorited item to be automatically dispalyed as the initial screen when you login. 
+Once you have identified an item as a favorite, the addition option `Set as home screen` become available. Clicking this will cause the favorited item to be automatically displayed as the initial screen when you login. 

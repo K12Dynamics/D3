@@ -52,7 +52,9 @@ The main documentation for D3 is organized into the following sections:
    :maxdepth: 2
    :caption: Administration
    
-   administration/index
+   administration/load-issues
+   administration/user-access
+   administration/publishing
    administration/impersonation
    administration/custom-reporting
    

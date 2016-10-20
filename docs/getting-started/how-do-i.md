@@ -21,14 +21,20 @@ Performing these steps will assign a home screen if you did not already have one
 
 ## How to Logout from D3
 
-## How to Create a Dashboard Filter
+## Common Dashboard Tasks
 
 ```eval_rst
-See :ref:`how do I apply dashboard filters <how-do-i-apply-dashboard-filter>`.
+:ref:`how do I apply dashboard filters <how-do-i-apply-dashboard-filter>`.
+
+:ref:`how do I clear a dashboard filter <how-do-i-dashboard-clear-filter>`.
+
+:ref:`How do I add a dashboard to my favorites <how-do-i-dashboard-add-to-favorites>`.```
+
+:ref:`How do I make a dashboard become my home screen? <how-do-i-dashboard-set-home-screen>`.
 ```
 
-## How to Clear a Filter
+## Common Chart Tasks
 
 ```eval_rst
-See :ref:`how do I clear a dashboard filter <how-do-i-clear-dashboard-filter>`.
+:ref:`How do I apply chart filters? <how-do-i-chart-apply-filter>`.
 ```

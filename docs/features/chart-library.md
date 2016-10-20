@@ -93,16 +93,90 @@ When the user selects Export to Excel, an Excel file is created with a generic n
 ### Working with Filters
 D3 dashboards present information at the highest aggregation level possible for the role of the logged in user. Filters allow users to narrow the scope of the data presented in a specific dashboard by excluding certain subsets of information.
 
-Each functional area has a specific set of filters applicable to the corresponding function:
+Each functional area includes a specific set of filters applicable to the corresponding function:
 
-![functional_areas](img/functional_areas.PNG)
+<div class="wy-table-responsive">
+<table class="docutils">
+    <thead>
+        <tr>
+            <th>Functional Area</th>
+            <th>Filters</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="6">Academics</td>
+            <td>Campus Type</td>
+        </tr>
+        <tr>
+            <td>Campus</td>
+        </tr>
+        <tr>
+            <td>Grade Level</td>
+        </tr>
+        <tr>
+            <td>Program Type</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+        </tr>
+        <tr>
+            <td>Race/Ethnicity</td>
+        </tr>
+        <tr>
+            <td rowspan="8">Finance</td>
+            <td>Financial Unit Group</td>
+        </tr>
+        <tr>
+            <td>Financial Unit</td>
+        </tr>
+        <tr>
+            <td>Function Group</td>
+        </tr>
+        <tr>
+            <td>Function</td>
+        </tr>
+        <tr>
+            <td>Object Group</td>
+        </tr>
+        <tr>
+            <td>Object</td>
+        </tr>
+        <tr>
+            <td>Fund Category</td>
+        </tr>
+        <tr>
+            <td>Fund</td>
+        </tr>
+        <tr>
+            <td rowspan="6">Human Resources</td>
+            <td>Campus Type</td>
+        </tr>
+        <tr>
+            <td>Campus</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+        </tr>
+        <tr>
+            <td>Bargaining Unit</td>
+        </tr>
+        <tr>
+            <td>Education Level</td>
+        </tr>
+        <tr>
+            <td>Total Experiences</td>
+        </tr>
+    </tbody>
+</table>
+</div>
 
 #### Selecting a Filter
 
 Data presented in all charts of the currently selected dashboard can be filtered to exclude certain dimensions or categories of data.
 
 ```eval_rst
-.. _how-do-i-apply-dashboard-filter:
+.. _how-do-i-dashboard-apply-filter:
 ```
 <div class="task-title">
 How do I apply dashboard filters?
@@ -142,7 +216,7 @@ How do I apply a campus type dashboard filter?
 Filter values default to all being unchecked. When all filter values are unchecked, D3 assumes all data should be included (which is equivalent to checking all filter values). This is equivalent to all values being checked or the “All” option being selected.
 
 ```eval_rst
-.. _how-do-i-clear-dashboard-filter:
+.. _how-do-i-dashboard-clear-filter:
 ```
 <div class="task-title">
 How do I apply clear a filter?
@@ -165,7 +239,20 @@ D3 provides various actions applicable to the dashboard as a whole vs. those for
 #### Add to Favorites
 Dashboards are located within folders and sub-folders of functional areas. To have quick and easy access to one or more dashboards, users may add dashboards to their Favorites area. 
 
-![Add_fav_to_dashboard](img/dashboard-add-favorite.png)
+```eval_rst
+.. _how-do-i-dashboard-add-to-favorites:
+```
+<div class="task-title">
+How do I add a dashboard to my favorites?
+</div>
+
+1.  <span class="task-item">Find a desired dashboard in the chart library and select it.</span>
+
+2.  <span class="task-item">Open the sidebar.</span>
+
+3.  <span class="task-item">Click `Add to favorites'</span>
+
+    The selected dashboard is now available in the Favorites area. 
 
 #### Remove from Favorites 
 Users can remove dashboard(s) added to the Favorites area. To do this, select the desired Favorites dashboard, open the sidebar, and then click Remove from favorites.
@@ -173,7 +260,20 @@ Users can remove dashboard(s) added to the Favorites area. To do this, select th
 #### Set as Home Screen 
 When the user first logs in, the default dashboard appears. This is the user’s home screen. D3 allows each user to change the home screen by setting it to a different dashboard.
 
-![dashboard_home_screen](img/dashboard-set-as-home.png)
+```eval_rst
+.. _how-do-i-dashboard-set-home-screen:
+```
+<div class="task-title">
+How do I make a dashboard become my home screen?
+</div>
+
+1.  <span class="task-item">Navigate to the desired dashboard.</span>
+
+2.  <span class="task-item">Open the sidebar.</span>
+
+3.  <span class="task-item">Click `Set as home screen'</span>
+
+    The selected dashboard now becomes the user's default dashboard. 
 
 ## Chart Sidebar
 
@@ -198,13 +298,30 @@ The Actions section provides tools to explore, save, and share the chart.
 
 To filter the data of a selected chart, click Filters from the sidebar. This presents the user with the applicable filters available for the functional area.
 
-![how_to_apply_chart_filters](img/how_to_apply_chart_filters.png)
+```eval_rst
+.. _how-do-i-chart-apply-filter:
+```
+<div class="task-title">
+How do I apply chart filters?
+</div>
+
+1.  <span class="task-item">Select a chart of interest then click Filters in the sidebar.</span>
+
+    This present the user with applicable filters for the chart functional area.
+
+2.  <span class="task-item">Select the filter name you wish to use</span>
+
+    - or click the down area located next to the filter name. This expands a list of categories that can be used to filter the data.
+
+3.  <span class="task-item">Click the desired filter.</span>
+
+    The chart is immediately redrawn showing the data associated with the checked filter value(s) only. The remaining, unselected value are filtered out from the chart. 
 
 To apply a filter, select a filter option to expand it, then select the checkboxes corresponding to the items you want to filter on.
 
 ![using_filters](img/using_filters.png)
 
-Multiple Filters can be used at once to narrow the scope of a chart. For example, you can select Elementary for Campus Types, Hispanic and White for Race/Ethnicities,and Gifted and Talented for Program Types
+Multiple filters can be used at once to narrow the scope of a chart. For example, you can select Elementary for Campus Types, Hispanic and White for Race/Ethnicities,and Gifted and Talented for Program Types
 
 ```eval_rst
 .. tip::
@@ -215,14 +332,28 @@ Multiple Filters can be used at once to narrow the scope of a chart. For example
 In the Academics function area, charts initially present data for the district as a whole for district staff roles; for campus administrator users, charts present data for the entire campus. The data is for all grade levels and all sub populations, and for all ethnic and gender groups. Users can filter out one or more campus type(s), campus(es), grade levels, ethnicities, genders, and sub populations. 
 For example, when viewing a chart aggregated for the whole school district, a user may want to narrow the scope of the chart to one or more campus type. 
 
-![how_to_apply_campus_dashboard_filters](img/how_to_apply_campus_dashboard_filters.PNG)
+<div class="task-title">
+How do I apply a campus type dashboard filter?
+</div>
+
+1.  <span class="task-item">Select a chart of interest in the Academics functional area.</span>
+
+    Campus Types are displayed
+
+2.  <span class="task-item">Open the sidebar then click Filters</span>
+
+3.  <span class="task-item">Select the Campus Types filter.</span>
+
+4.  <span class="task-item">Check one or more campus types.</span>
+
+    The chart is immediately redrawn with data for the selected campus type(s) only; data for unselected campus types are removed from the context of the chart. 
 
 #### Sort By Options
 
 Click the `Sort by` item to see available choices for sorting the items in the selected chart. There are three options available:
 
 * **Default**: This is the initial setting, which displays the items in the chart in the order specified by the chart creator.
-* ** Value**: Organizes the chart items in ascending order of their values.
+* **Value**: Organizes the chart items in ascending order of their values.
 * **Category**: Organizes the chart items alphabetically according to the category names.
 
 #### Data View

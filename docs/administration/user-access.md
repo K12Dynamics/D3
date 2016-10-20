@@ -78,7 +78,6 @@ Core roles are automatically setup for each D3 implementation. They are the most
                 TAPR<br>
             </td>
             <td>
-                Administrator<br>
                 Impersonate<br>
                 Publish Watch Lists<br>
             </td>

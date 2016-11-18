@@ -74,3 +74,50 @@ The easiest way to capture the content area of the browser in Chrome is to insta
 Page Screen Capture extension, or just use the Snipping Tool built in to Windows.
 
 Annotated screenshots used in the documentation are maintained in the Visio file `drawings.vxdx`.
+
+## Using Sphinx directives in markdown
+
+###Link Reference:
+    ```eval_rst
+    .. _how-do-i-explore-existing-chart:
+    ```
+
+### See Also:
+    ```eval_rst
+    .. seealso:: 
+    :ref:`technical-olap-concepts`
+     ```
+
+### Note:
+    ```eval_rst
+    .. note::
+       This information be be of interest.
+    ```
+
+### Tip:
+    ```eval_rst
+    .. tip::
+       Here's a tip for you.
+    ```
+
+### Warning:
+    ```eval_rst
+    .. warning::
+       Be careful with this.
+    ```
+
+## Custom CSS Classes
+
+### Task (How Do I...):
+    <div class="task-title">
+    How do I apply chart filters?
+    </div>
+
+    1.  <span class="task-item">Select a chart of interest then click Filters in the sidebar.</span>
+
+        This present the user with applicable filters for the chart functional area.
+
+    2.  <span class="task-item">Select the filter name you wish to use</span>
+
+    3.  <span class="task-item">Click the desired filter.</span>
+

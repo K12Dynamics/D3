@@ -64,9 +64,11 @@ The main documentation for D3 is organized into the following sections:
    :maxdepth: 2
    :caption: Technical Reference
    
-   technical/default-library
-   technical/index
+   technical/architecture
+   technical/olap-concepts
    technical/measures
+   technical/default-library
+   technical/agent
 
 ..  _about-section:
 
@@ -77,7 +79,8 @@ The main documentation for D3 is organized into the following sections:
    about/vision
    about/roadmap
    about/releases
-   about/index
+   about/accessibility
+   about/confidentiality
    
 ..
     Indices and tables

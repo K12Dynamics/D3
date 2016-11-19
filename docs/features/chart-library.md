@@ -12,6 +12,9 @@ To access the chart library, click the main menu icon at the top left of the scr
 
 The chart library is organized into sections, such as Academics, Finance, and Human Resources. Some sections that contain a lot of charts will include additional sections within them. You can navigate the chart library just like a folder tree.
 
+```eval_rst
+.. _features-my-items:
+```
 ## My Items
 
 The first item in the chart library is called "My Items". This is a folder that contains all the personal charts and dashboards created by you.
@@ -39,14 +42,14 @@ Dashboards show their charts at a smaller size to facilitate the dashboard-style
 
 The application enables you to work with the dashboard as a whole or with an individual chart within the dashboard. To activate an individual chart, you select it by clicking or tapping the chart on the dashboard. A border will be displayed around the chart to indicate it is active, and the sidebar information will change to provide information and actions specific to the selected chart.
 
-You can open a chart within a dashboard to full-size by choosing `View` from the sidebar once the chart is selected. 
+You can open a chart within a dashboard to full-size by choosing "View" from the sidebar once the chart is selected. 
 
 ```eval_rst
 .. tip::
    If you are using a device with a mouse, you can also double-click a chart within a dashboard to open it full-size.
 ```
 
-To go back to the original dashboard view, just select the `Dashboard` action from the sidebar.
+To go back to the original dashboard view, just select the "Dashboard" action from the sidebar.
 
 ### Dashboard Layout
 
@@ -61,7 +64,7 @@ On smaller hand-held devices, charts are displayed in a single column. Each char
 
 ## Dashboard Sidebar
 
-Users can perform various actions on dashboards. These actions are available from the sidebar, which can be activated by clicking the double left arrow icon, located at the top right of the D3 screen. Actions applicable to the dashboard as a whole are enabled as shown below; disabled actions are reserved for selected charts only.
+Users can perform various actions on dashboards. These actions are available from the sidebar, which is activated by clicking the double-left arrow icon, located at the top right of the D3 screen. Actions applicable to the dashboard as a whole are enabled as shown below; disabled actions are reserved for selected charts only.
 
 ![Dashboard Actions](img/dashboard-sidebar.png)
 
@@ -73,9 +76,9 @@ Users can perform various actions on dashboards. These actions are available fro
 ```
 
 ### Send To Options
-The Send to action allows the user to share, save, print or export the dashboard.
+The `Send to...` item displays a sub-menu with various options as follows:
 
-![sendto](img/sendto.png)
+![Send to](img/dashboard-send-to.png)
 
 * **Printer**: Allows the user to print the dashboard. The user is presented with the Print dialogue box to select the printer. 
 
@@ -88,7 +91,7 @@ The Send to action allows the user to share, save, print or export the dashboard
 * **Export to Excel**: Allows the user to export the data for each chart displayed in the dashboard. The data for each chart is saved as a separate tab within the same Excel file; each tab is labeled with the corresponding chart name. 
 When the user selects Export to Excel, an Excel file is created with a generic name and is downloaded to the local device’s Downloads folder. You can navigate to the file and open it or use browser to view it.
 
-![export_to_excel](img/export_to_excel.png)
+![export_to_excel](img/dashboard-export-excel.png)
 
 ### Working with Filters
 D3 dashboards present information at the highest aggregation level possible for the role of the logged in user. Filters allow users to narrow the scope of the data presented in a specific dashboard by excluding certain subsets of information.
@@ -277,7 +280,7 @@ How do I make a dashboard become my home screen?
 
 ## Chart Sidebar
 
-Users can perform various actions on a selected chart. These actions are available from the sidebar which can opened by clicking the double left arrow icon, located at the top right of the application. Actions applicable to the selected chart are enabled as shown below. Actions are grouped into three sections: Actions, Modify, and Dashboard.
+Users can perform various actions on a selected chart. These actions are available from the sidebar, which is opened by clicking the double-left arrow icon, located at the top right of the application. Actions applicable to the selected chart are enabled as shown below. Actions are grouped into three sections: Actions, Modify, and Dashboard.
 
 ### Chart Actions
 The Actions section provides tools to explore, save, and share the chart.
@@ -311,7 +314,7 @@ How do I apply chart filters?
 
 2.  <span class="task-item">Select the filter name you wish to use</span>
 
-    - or click the down area located next to the filter name. This expands a list of categories that can be used to filter the data.
+    \- or click the down area located next to the filter name. This expands a list of categories that can be used to filter the data.
 
 3.  <span class="task-item">Click the desired filter.</span>
 
@@ -319,7 +322,7 @@ How do I apply chart filters?
 
 To apply a filter, select a filter option to expand it, then select the checkboxes corresponding to the items you want to filter on.
 
-![using_filters](img/using_filters.png)
+![Using Chart Filters](img/chart-filters-example.png)
 
 Multiple filters can be used at once to narrow the scope of a chart. For example, you can select Elementary for Campus Types, Hispanic and White for Race/Ethnicities,and Gifted and Talented for Program Types
 
@@ -329,7 +332,7 @@ Multiple filters can be used at once to narrow the scope of a chart. For example
 ```
 #### Filter Example
 
-In the Academics function area, charts initially present data for the district as a whole for district staff roles; for campus administrator users, charts present data for the entire campus. The data is for all grade levels and all sub populations, and for all ethnic and gender groups. Users can filter out one or more campus type(s), campus(es), grade levels, ethnicities, genders, and sub populations. 
+In the Academics functional area, charts initially present data for the district as a whole for district staff roles; for campus administrator users, charts present data for the entire campus. The data is for all grade levels and all sub populations, and for all ethnic and gender groups. Users can filter out one or more campus type(s), campus(es), grade levels, ethnicities, genders, and sub populations. 
 For example, when viewing a chart aggregated for the whole school district, a user may want to narrow the scope of the chart to one or more campus type. 
 
 <div class="task-title">
@@ -359,7 +362,7 @@ Click the `Sort by` item to see available choices for sorting the items in the s
 #### Data View
 The Data View option within the Modify section allows the user to change the display from chart to data grid. This allows the user to see the underlying data of the chart in tabular form. Below is an example of changing from chart to data view of ADA % for each campus. 
 
-![Switching to data view](img/chart-data-view.png)
+![Switching to Data View](img/chart-data-view.png)
 
 It is a toggle switch, so selecting it a second time switches back to chart view.
 
@@ -373,10 +376,19 @@ Charts are located throughout D3 folders, sub-folders, and/or dashboards of func
 #### Remove from Favorites
 To remove a chart from favorites, select the chart you want removed from Favorites then click Remove from favorites
 
-### Legend Section
-Most charts provide a legend within the chart that describes each chart component. The legend includes color indicators to identify components of multi-color charts. Because of space limitations within the chart, the legend within the chart may not be display clearly. So, in addition to the legend being provided within the chart, the legend information is displayed, much more clearly, in the legend section of the Action menu. Below is a sample legend section view.
+```eval_rst
+.. _features-chart-legend:
+```
 
-![legend_view](img/chart-legend.png)
+### Legend Section
+Most charts provide a color-coded legend within the chart that describes each chart component. However, when there are space constraints displaying the chart, D3 will automatically hide the legend. Even when the legend is not displayed within the chart area, it is always available in the sidebar.
+
+Additionally, the legend section of the sidebar provides some additional features that can be applied to each legend item. These features are hidden by default, but can be expanded into view by clicking the down arrow on the right-side of the legend text:
+
+* Items can be hidden from the chart by changing the visibility toggle switch under a legend item.
+* The color of a chart item can be changed, as shown below. Custom colors are automatically persisted for the current user only. The original color can be reset by clicking `Reset to default`.
+
+![Chart Legend](img/chart-legend.png)
 
 
 

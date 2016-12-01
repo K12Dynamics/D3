@@ -12,7 +12,37 @@ Work is proceeding at a breakneck pace on our new super-charged watch list manag
 * Much more power in specifying criteria for matching students.
 * Ability to build point-based watch lists.
 
-## August 2016 Release
+## November 2016 Release
+
+## October 2016 Release
+
+## September 2016 Release
+
+<p class="new featured"><span class="label"></span>Improved Special Education Discipline Dashboard</p>
+
+Our Special Education Discipline dashboard includes charts that report on the various metrics needed for identifying discretionary discipline disproportionality between all students and special education students. For this release, we've combined multiple charts to improve readability.  
+
+![SpEd Dashboard](img/201609-disc-sped-dashboard.png)
+
+<p class="new featured"><span class="label"></span>Remember Changes to Sort Order</p>
+
+When a user changes the sort order of a chart, D3 now remembers the change and defaults to the last sort order selected by the user when the chart is viewed at a future time.
+
+<p class="fixed"><span class="label"></span>Blank screen opening D3 for certain customers in IE 10 or 11 (#2515)</p>
+
+<p class="fixed"><span class="label"></span>No students from iStation results meeting expected growth in prior school years (#2516)</p>
+
+<p class="fixed"><span class="label"></span>Min/max/range issue with specific charts (#2529)</p>
+
+<p class="fixed"><span class="label"></span>Save as command in Explorer asks to overwrite exploration which does not exist (#2533)</p>
+
+<p class="fixed"><span class="label"></span>&lt;Unsaved Changes&gt; appears when opening an existing exploration (#2534)</p>
+
+<p class="fixed"><span class="label"></span>Total count of items in published watch list is reported incorrectly (#2480)</p>
+
+<p class="fixed"><span class="label"></span>Misaligned header cells in watch list when sidebar is opened (#2451)</p>
+
+## August 2016 Release 
 
 <p class="new featured"><span class="label"></span>New Color Themes</p>
 

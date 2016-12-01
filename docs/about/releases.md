@@ -4,29 +4,182 @@
 
 New features we're working on for upcoming releases include:
 
-<p class="upcoming"><span class="label"></span>Watch List Management Redesign</p>
+<p class="upcoming"><span class="label"></span>Watch List Results Redesign</p>
 
-Work is proceeding at a breakneck pace on our new super-charged watch list management redesign. We expect to release it for general use next month. Major changes include:
+After completing the redesign for watch list creation, we've now begun focusing on redesigning the way watch list results are displayed. Major changes include:
 
-* A brand new user experience that simplifies creation of watch lists.
-* Much more power in specifying criteria for matching students.
-* Ability to build point-based watch lists.
+* New visually appealing grid layout.
+* Increased flexibility columns available in the watch list results grid.
+* Ability to include watch list criteria items in the results grid.
+* Expandable rows that reveal additional insights into student characteristics and performance.
+
+<p class="upcoming"><span class="label"></span>Local Data Management Capabilities</p>
+
+Currently, all data warehouse information is sourced from external systems, either from the customer or from published sources. In some cases, required information is not available in the customer's student information system, which leads to challenges with creating the data files required for import into D3.
+
+To address this, we are introducing local data management capabilities to D3, designed to bridge the gap between data used by D3 versus data available from the customer's systems. The following two scenarios will be supported by this new capability:
+
+1. **Attribute maintenance example**: The School file gets imported into D3 with some missing meta data fields. The customer updates missing meta data using a UI in D3. Next time the School file gets imported, the meta data in D3 should not get overwritten with empty values from the file.
+
+2. **File maintenance example** The Action Category file is missing in the file import, ActionCategoryCode is missing in the ActionType file. In the Local Data Maintenance UI, the customer first creates action categories, then assigns action categories to the existing ActionTypes. Next time the ActionType file gets imported, action category codes do not get overwritten. 
+
+<p class="upcoming"><span class="label"></span>More Granular Attendance Tracking</p>
+
+Today, D3 captured daily attendance information only. This information is also used in conjunction with the school calendar to identify student enrollment metrics. We will be introducing a new approach for enrollment and attendance tracking that supports per-period attendance records. This new information will enable new dimensions of student analysis of the impact that absence has on student behavior and performance, as well as provide useful reporting capabilities to teachers.
 
 ## November 2016 Release
 
+<p class="new featured"><span class="label"></span>Apply Global KPIs to Categorical Charts</p>
+
+Previously, KPIs were applied to gauge charts and scorecards. Now column and line charts also include visual feedback when a KPI is configured on the data item by displaying plot bands on the chart surface area. 
+
+![KPI Plot Bands](img/201611-kpi-plot-bands.png)
+
+<p class="new featured"><span class="label"></span>Major Changes to Dashboard Filters</p>
+
+We took a good hard look at the way our so-called "global" filters work for dashboards after noticing that this functionality has been a source of confusion for customers. As a result, the concept of dashboard filters has been entirely redesigned.
+
+* **Filter changes applied to dashboards and charts are no longer persisted for the user**
+
+Automatically saving the last set of applied filters has been confusing for the user and we decided it was not especially useful. Users would rather return to the published state of the dashboard on future visits, rather than to the data representation of their last set of applied filters. If a permanent change to the filters is desired, this can be achieved by create a new dashboard or modifying it if it's a personal dashboard.
+
+* **When a chart is selected, filter changes now only apply to the selected chart**
+
+Previously, the available filters for a selected chart included both chart-specific filters as well as "global" filters. It was confusing that some filters affect the whole dashboard event when a chart is selected, whereas others only affect the selected chart. Now, filter changes applied when a chart is selected, always affect only the selected chart.
+
+* **Indicate multiple filter states when a chart is not selected**
+
+As a result of the previous point, we now needed a way to manage the display and use of filters on the dashboard when no chart is selected. For example, the dashboard as a whole may be filtered on the current school year, but one of the charts is now filtered on a different school year. To solve, this each filter checkbox now supports a third "mixed" state, which indicates that the filter criteria is on for some charts in the dashboard and off for others. As you can see in the image below, the mixed state selection is indicated by a minus-sign inside the checkbox:
+
+![Mixed State Filter](img/201611-mixed-state-filter.png)
+
+* **"Global" dashboard filters are now dynamically identified**
+
+Previously, filters that should apply to the dashboard as a whole needed to be manually identified and configured for each dashboard. Now, those filters are dynamically identified by surfacing to the dashboard those filters common to all charts.
+
+<p class="fixed"><span class="label"></span>Gauge invisible on initial load (#3183)</p>
+
+<p class="fixed"><span class="label"></span>Explain text does not get refreshed when navigating from Quick Search (#3134)</p>
+
+<p class="fixed"><span class="label"></span>"Two or more races" appears twice in State Assessment by Race scorecard (#3161)</p>
+
 ## October 2016 Release
+
+<p class="new featured"><span class="label"></span>New Watch List Creation Wizard</p>
+
+We have released the first phase of our new watch list design, which delivers a brand new experience for building watch lists (the second phase of our redesign will provide a similarly new experience for the watch list results view). You now have significantly more power in specifying criteria for matching students, as well as a new ability to build point-based watch lists.
+
+* **New Wizard-Based Approach**
+
+Previously, we supported two kinds of watch list, static and dynamic. Choosing and using the right one could be a bit confusing. Plus, with our redesign, a variant of the dynamic type is being introduced, called point-based.
+
+To simplify user experience with creating (and modifying) watch lists, we've adopted a wizard-style approach, wherein the user makes choices as they proceed through a series of steps.
+
+![Wizard Approach](img/201610-watchlist-wizard.png)
+
+Once a watch list type is selected, the remaining steps are revealed:
+
+![Wizard Steps](img/201610-watchlist-static-steps.png)
+
+* **Grouped Search Criteria with Summary of Selections**
+
+Over time, the available watch list search options has grown. With the redesign, these search options are organized by group, using an accordion layout, which expands only one section at a time. Additionally, as search fields are filled out, tags are displayed (with a teal background color) to summarize the current search options.
+
+![Select Students](img/201610-watchlist-static-search.png)
+ 
+* **Intuitive Management of Static Watch Lists**
+
+For static watch lists, results are shown inline to the current wizard step. The user can easily add and remove students, and see a set of tags representing the set of added students.
+
+![Add Students](img/201610-watchlist-static-add.png)
+
+* **More Powerful Search Criteria**
+
+Previously, watch list criteria used an assumed "current" context, such as current school year, or currently placed in a program. This restriction is gone with the new design.
+
+For date-based events, you can now specify the context of current school year, previous school year, current term, or previous term. Similar flexibility is provided for program placement, providing options for currently placed, previously placed (dropped), currently or previously placed, or never placed.
+
+Additionally, you can now specify a type of criteria multiple times allowing you to combine criteria in different contexts. For example, you could identify students for which excessive absenteeism only started in the current school year. To do this you would specify attendance (or absence) criteria multiple times, such as  has been absent more than 10 times this school year, but was absent in the previous school year less than 6 times.
+
+![Search Criteria](img/201610-watchlist-search-criteria.png)
+
+* **Point Assignment Criteria**
+
+This customer-requested feature allows you to define student inclusion in a watch-list based on the accumulated point value of various criteria. When selecting this type of watch list, an additional step called Point Assignments is displayed after the Search Criteria step.
+
+You specify a point value for each criteria, and a total number of points needed from the matched criteria for a student to be included in the watch list. You can also omit a point value, which requires that the criteria is met for inclusion.
+
+![Search Criteria](img/201610-watchlist-point-assignments.png)
+
+* **Configure Columns Displayed in Watch List Results**
+
+The new watch list creation wizard also now allows you to specify which columns to include in your results, and also preview the results before saving.  
+
+![Search Criteria](img/201610-watchlist-select-columns.png)
+
+We're now working on phase 2 the watch list redesign project, which is a new design for displaying  matching students. This will change the current implementation of the Select Columns and Preview steps in the watch list wizard.
+ 
+<p class="new featured"><span class="label"></span>Send Email Improvements</p>
+
+We've made a couple of improvements to clarify who the sender is when emails using the Send by email feature in D3. First, the display name of the from address is now set to the first and last name of the logged in user. Second, the logged in user is now automatically cc-ed on the emails.
+
+<p class="fixed"><span class="label"></span>Infographic displayed incorrectly in some summary scorecard grids (#2914)</p>
+
+<p class="fixed"><span class="label"></span>Gauge chart does not resize until the sidebar is opened or closed (#2536)</p>
+
+<p class="fixed"><span class="label"></span>NaN in scorecard grid (#2671)</p>
+
+<p class="fixed"><span class="label"></span>Missing sparklines in Istation grids (#2840)</p>
+
+<p class="fixed"><span class="label"></span>"Undefined" is displayed instead of the filter values in data explorer (#2949)</p>
+
+<p class="fixed"><span class="label"></span>Scorecard display issue when using year-over-year (#3035)</p>
+
+<p class="fixed"><span class="label"></span>User role appears multiple times when searching users (#3068)</p>
 
 ## September 2016 Release
 
+<p class="new featured"><span class="label"></span>Launch of Preview Environment</p>
+
+Changes to the production D3 environment are usually made once a month, but we wanted a way for customers to try out new features currently under development and provide feedback for their official release. To address this, we now have a preview environment available to customers, which is automatically updated every time a developer commits code changes.
+
+Your account manager will provide details for using the preview environment when applicable.
+
+<p class="new featured"><span class="label"></span>Legend Now Available In Data Explorer</p>
+
+Legend information is not available in the data explorer sidebar for the selected exploration level, with the ability to toggle visibility and change colors. 
+
+![Explorer Legend](img/201609-explorer-legend.png)
+
+<p class="new featured"><span class="label"></span>New TAPR Dashboards</p>
+
+Three new TAPR dashboards: Advanced Course/Dual Enrollment, Graduates, and SAT/ACT dashboard. Most of the charts in these new dashboards are new while some were moved from the existing TAPR College Readiness dashboard.
+
+![TAPR Dashboards](img/201609-tapr-dashboards.png)
+
 <p class="new featured"><span class="label"></span>Improved Special Education Discipline Dashboard</p>
 
-Our Special Education Discipline dashboard includes charts that report on the various metrics needed for identifying discretionary discipline disproportionality between all students and special education students. For this release, we've combined multiple charts to improve readability.  
+Our Special Education Discipline dashboard includes charts that report on the various metrics needed for identifying discretionary discipline disproportionality between all students and special education students. For this release, we've combined multiple charts to improve readability, introduced a new chart that displays ISS, OSS, and DAEP disproportionality rates, and replaced the "Count of Non-SPED Students" series with "Count of All Students".  
 
 ![SpEd Dashboard](img/201609-disc-sped-dashboard.png)
 
 <p class="new featured"><span class="label"></span>Remember Changes to Sort Order</p>
 
 When a user changes the sort order of a chart, D3 now remembers the change and defaults to the last sort order selected by the user when the chart is viewed at a future time.
+
+<p class="new featured"><span class="label"></span>Find Student By Id in Global Search</p>
+
+The global search tool (activated by clicking the search box on the top right) can now be used to locate students by their student id.
+
+<p class="new featured"><span class="label"></span>Reset Color</p>
+
+We've added the ability to reset to the default color from the legend color selection dialog. 
+
+<p class="fixed"><span class="label"></span>Explain text not updated when a new filter is applied (#2448)</p>
+
+<p class="fixed"><span class="label"></span>Misaligned header cells in watch list when sidebar is opened (#2451)</p>
+
+<p class="fixed"><span class="label"></span>Total count of items in published watch list is reported incorrectly (#2480)</p>
 
 <p class="fixed"><span class="label"></span>Blank screen opening D3 for certain customers in IE 10 or 11 (#2515)</p>
 
@@ -37,10 +190,6 @@ When a user changes the sort order of a chart, D3 now remembers the change and d
 <p class="fixed"><span class="label"></span>Save as command in Explorer asks to overwrite exploration which does not exist (#2533)</p>
 
 <p class="fixed"><span class="label"></span>&lt;Unsaved Changes&gt; appears when opening an existing exploration (#2534)</p>
-
-<p class="fixed"><span class="label"></span>Total count of items in published watch list is reported incorrectly (#2480)</p>
-
-<p class="fixed"><span class="label"></span>Misaligned header cells in watch list when sidebar is opened (#2451)</p>
 
 ## August 2016 Release 
 

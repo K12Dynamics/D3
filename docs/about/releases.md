@@ -9,53 +9,57 @@ New features we're working on for upcoming releases include:
 After completing the redesign for watch list creation, we've now begun focusing on redesigning the way watch list results are displayed. Major changes include:
 
 * New visually appealing grid layout.
-* Increased flexibility columns available in the watch list results grid.
+* Increased flexibility with selecting information displayed in results grid.
 * Ability to include watch list criteria items in the results grid.
 * Expandable rows that reveal additional insights into student characteristics and performance.
+
+You're welcome to check out and provide feedback on our [conceptual mockup](https://embed.plnkr.co/V4d3eBcIsDuqN69071I9/?show=preview) of the new design.
 
 <p class="upcoming"><span class="label"></span>Local Data Management Capabilities</p>
 
 Currently, all data warehouse information is sourced from external systems, either from the customer or from published sources. In some cases, required information is not available in the customer's student information system, which leads to challenges with creating the data files required for import into D3.
 
-To address this, we are introducing local data management capabilities to D3, designed to bridge the gap between data used by D3 versus data available from the customer's systems. The following two scenarios will be supported by this new capability:
+To address this, we are introducing local data management capabilities to D3, designed to bridge the gap between data used by D3 versus data available from the customer's systems. We will be supporting both attribute and file based maintenance scenarios:
 
-1. **Attribute maintenance example**: The School file gets imported into D3 with some missing meta data fields. The customer updates missing meta data using a UI in D3. Next time the School file gets imported, the meta data in D3 should not get overwritten with empty values from the file.
+* **Attribute maintenance example**: The School file gets imported into D3 with some missing metadata fields. The customer updates missing metadata using D3 Local Data Maintenance. Next time the School file gets imported, the metadata in D3 should not get overwritten with empty values from the file.
 
-2. **File maintenance example** The Action Category file is missing in the file import, ActionCategoryCode is missing in the ActionType file. In the Local Data Maintenance UI, the customer first creates action categories, then assigns action categories to the existing ActionTypes. Next time the ActionType file gets imported, action category codes do not get overwritten. 
+* **File maintenance example** The Action Category file is missing in the file import, and thus ActionCategoryCode has no values in the ActionType file. Using D3 Local Data Maintenance, the customer first creates action categories, then assigns action categories to the existing ActionTypes. Next time the ActionType file gets imported, action category codes do not get overwritten. 
 
 <p class="upcoming"><span class="label"></span>More Granular Attendance Tracking</p>
 
-Today, D3 captured daily attendance information only. This information is also used in conjunction with the school calendar to identify student enrollment metrics. We will be introducing a new approach for enrollment and attendance tracking that supports per-period attendance records. This new information will enable new dimensions of student analysis of the impact that absence has on student behavior and performance, as well as provide useful reporting capabilities to teachers.
+Today, D3 captured daily attendance information only. This information is also used in conjunction with the school calendar to identify student enrollment metrics. 
+
+We will be introducing a new approach for enrollment and attendance tracking that supports per-period attendance records. Availability of this additional information will enable new dimensions of student analysis on the impact that absence has on student behavior and performance, as well as provide useful reporting capabilities to teachers for individual classes or courses.
 
 ## November 2016 Release
 
 <p class="new featured"><span class="label"></span>Apply Global KPIs to Categorical Charts</p>
 
-Previously, KPIs were applied to gauge charts and scorecards. Now column and line charts also include visual feedback when a KPI is configured on the data item by displaying plot bands on the chart surface area. 
+Previously, KPIs were applied to gauge charts and scorecards. Now, column and line charts also include visual feedback when an associated KPI is setup by displaying plot bands on the chart surface area. 
 
 ![KPI Plot Bands](img/201611-kpi-plot-bands.png)
 
 <p class="new featured"><span class="label"></span>Major Changes to Dashboard Filters</p>
 
-We took a good hard look at the way our so-called "global" filters work for dashboards after noticing that this functionality has been a source of confusion for customers. As a result, the concept of dashboard filters has been entirely redesigned.
+We took a good hard look at the way our "global" filters work for dashboards after noticing that this functionality has been a source of confusion for customers. As a result, the concept of dashboard filters has been entirely redesigned.
 
-* **Filter changes applied to dashboards and charts are no longer persisted for the user**
+* **Filter changes are no longer persisted for the user**
 
-Automatically saving the last set of applied filters has been confusing for the user and we decided it was not especially useful. Users would rather return to the published state of the dashboard on future visits, rather than to the data representation of their last set of applied filters. If a permanent change to the filters is desired, this can be achieved by create a new dashboard or modifying it if it's a personal dashboard.
+Automatically saving the last set of filters applied to dashboards and charts has been confusing for the user and we decided it was not especially useful. Users would rather return to the published state of the dashboard on future visits, rather than to the data representation of their last set of applied filters. If a permanent change to the filters is desired, this can be achieved by creating a new dashboard or modifying it if it's a personal dashboard.
 
 * **When a chart is selected, filter changes now only apply to the selected chart**
 
-Previously, the available filters for a selected chart included both chart-specific filters as well as "global" filters. It was confusing that some filters affect the whole dashboard event when a chart is selected, whereas others only affect the selected chart. Now, filter changes applied when a chart is selected, always affect only the selected chart.
+Previously, the available filters for a selected chart included both chart-specific filters as well as "global" filters. It was confusing that some filters affected the entire dashboard even when a chart is selected, whereas others only affected the selected chart. Now, filter changes applied when a chart is selected, always affect only the selected chart.
 
 * **Indicate multiple filter states when a chart is not selected**
 
-As a result of the previous point, we now needed a way to manage the display and use of filters on the dashboard when no chart is selected. For example, the dashboard as a whole may be filtered on the current school year, but one of the charts is now filtered on a different school year. To solve, this each filter checkbox now supports a third "mixed" state, which indicates that the filter criteria is on for some charts in the dashboard and off for others. As you can see in the image below, the mixed state selection is indicated by a minus-sign inside the checkbox:
+As a result of the previous point, we now needed a way to manage the display and use of filters on the dashboard when no chart is selected. For example, the dashboard as a whole may be filtered on the current school year, but one of the charts is now filtered on a different school year. To solve this, each filter checkbox now supports a third "mixed" state, which indicates that the filter criteria is on for some charts in the dashboard and off for others. As you can see in the image below, the mixed state selection is indicated by a minus-sign inside the checkbox:
 
 ![Mixed State Filter](img/201611-mixed-state-filter.png)
 
 * **"Global" dashboard filters are now dynamically identified**
 
-Previously, filters that should apply to the dashboard as a whole needed to be manually identified and configured for each dashboard. Now, those filters are dynamically identified by surfacing to the dashboard those filters common to all charts.
+Previously, filters that should apply to the dashboard as a whole needed to be manually identified and configured for each dashboard. Now, those filters are automatically identified by surfacing to the dashboard those filters common to all charts.
 
 <p class="fixed"><span class="label"></span>Gauge invisible on initial load (#3183)</p>
 
@@ -67,13 +71,13 @@ Previously, filters that should apply to the dashboard as a whole needed to be m
 
 <p class="new featured"><span class="label"></span>New Watch List Creation Wizard</p>
 
-We have released the first phase of our new watch list design, which delivers a brand new experience for building watch lists (the second phase of our redesign will provide a similarly new experience for the watch list results view). You now have significantly more power in specifying criteria for matching students, as well as a new ability to build point-based watch lists.
+We have released the first phase of our new watch list design, which delivers a brand new experience for building watch lists. You now have significantly more power in specifying criteria for matching students, as well as a new ability to build point-based watch lists.
 
 * **New Wizard-Based Approach**
 
-Previously, we supported two kinds of watch list, static and dynamic. Choosing and using the right one could be a bit confusing. Plus, with our redesign, a variant of the dynamic type is being introduced, called point-based.
+Previously, we supported two kinds of watch list, static and dynamic. Choosing and using the right one could be a bit confusing. Plus, with our redesign, a variant of the dynamic type is being introduced, called point-based, so we would now have three kinds of watch list, which would further exasperate the issue.
 
-To simplify user experience with creating (and modifying) watch lists, we've adopted a wizard-style approach, wherein the user makes choices as they proceed through a series of steps.
+To simplify the user experience with creating (and modifying) watch lists, we've adopted a wizard-style approach, wherein the user makes choices as they proceed through a series of steps. The first step is to choose the watch list type:
 
 ![Wizard Approach](img/201610-watchlist-wizard.png)
 
@@ -83,7 +87,7 @@ Once a watch list type is selected, the remaining steps are revealed:
 
 * **Grouped Search Criteria with Summary of Selections**
 
-Over time, the available watch list search options has grown. With the redesign, these search options are organized by group, using an accordion layout, which expands only one section at a time. Additionally, as search fields are filled out, tags are displayed (with a teal background color) to summarize the current search options.
+Over time, the available watch list search options has grown. With the redesign, these search options are grouped together using an accordion-style layout, which expands only one section at a time. Additionally, as search fields are filled out, tags are displayed above to summarize the current search options.
 
 ![Select Students](img/201610-watchlist-static-search.png)
  
@@ -117,11 +121,11 @@ The new watch list creation wizard also now allows you to specify which columns 
 
 ![Search Criteria](img/201610-watchlist-select-columns.png)
 
-We're now working on phase 2 the watch list redesign project, which is a new design for displaying  matching students. This will change the current implementation of the Select Columns and Preview steps in the watch list wizard.
+We are now working on phase 2 of the watch list redesign project, which is a new design for displaying  matching students. This will change the current implementation of the Select Columns and Preview steps in the watch list wizard.
  
 <p class="new featured"><span class="label"></span>Send Email Improvements</p>
 
-We've made a couple of improvements to clarify who the sender is when emails using the Send by email feature in D3. First, the display name of the from address is now set to the first and last name of the logged in user. Second, the logged in user is now automatically cc-ed on the emails.
+We've made a couple of improvements to clarify who the sender is when emails are sent from D3 using the Send To Email feature. First, the display name of the from address is now set to the first and last name of the logged in user. Second, the logged in user is now automatically cc-ed on the emails.
 
 <p class="fixed"><span class="label"></span>Infographic displayed incorrectly in some summary scorecard grids (#2914)</p>
 
@@ -147,7 +151,7 @@ Your account manager will provide details for using the preview environment when
 
 <p class="new featured"><span class="label"></span>Legend Now Available In Data Explorer</p>
 
-Legend information is not available in the data explorer sidebar for the selected exploration level, with the ability to toggle visibility and change colors. 
+Legend information is now available in the data explorer sidebar for the selected exploration level, with the ability to toggle visibility and change colors. 
 
 ![Explorer Legend](img/201609-explorer-legend.png)
 

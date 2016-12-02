@@ -75,7 +75,7 @@ Dimensions contains attributes that are used to categorize related facts. Dimens
 
 The attributes of an OLAP dimension are represented in one or more hierarchies of classifications. Each tier in the hierarchy is known as a dimension hierarchy level, or simply a dimension level. It is most common for hierarchies to have only one level, but multiple level hierarchies are also used when a logical sub-classification of attributes is available within the dimension.
 
-Attributes can exist in dimensions that are not associated with any hierarchies. These cannot be used for grouping or filtering results, but they can be included in the returned information for providing additional context. A good example of this is the student dimension, which includes the first name and last name of the student. We can't write OLAP queries on this information but we can include them in the results to display to the user (note: D3 does also include a more traditional text search capability that can be used for finding students by their name).
+Attributes can exist in dimensions that are not associated with any hierarchies. These cannot be used for grouping or filtering results, but they can be included in the returned information for providing additional context, as well as for text-based searches. A good example of this is the student dimension, which includes the first name and last name of the student.
 
 ## A Closer Look
 

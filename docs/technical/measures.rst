@@ -1,3 +1,5 @@
+.. _technical-olap-measures:
+
 OLAP Measures Used In D3
 ===========================
 

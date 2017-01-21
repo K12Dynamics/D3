@@ -33,7 +33,7 @@ Data Explorer capabilities include:
 
 Learn more about these capabilities in the remainder of this section.
 
-## How To Explore
+## How to Explore
 
 There are three ways to initiate a data exploration in D3:
 
@@ -60,7 +60,7 @@ How do I apply explore a chart?
 
     The main D3 content area is redrawn to present the exploration steps to reproduce the chart data.
 
-3.  <span class="task-item">Begin exploring by selecting actions such as filter, categorize, or disaggregate on an chart in the display action.</span>
+3.  <span class="task-item">Begin exploring by selecting actions such as filter, categorize, or disaggregate on n chart in the display action.</span>
 
     New charts are recreated and presented in the Explorer display area as a result of successive actions.
 
@@ -113,9 +113,9 @@ Let's now take a look at the other two levels in this exploration.
 
 ### The Filter Level
 
-The second level applies a filter to only include data from the 2016-2017 school year. By default values added to an exploration represent the summary of information globally in the data warehouse. It is very common to want to filter this to look at the current or preceding school year only.
+The second level applies a filter to only include data from the 2016-2017 school year. By default, values added to an exploration represent the summary of information globally in the data warehouse. It is very common to want to filter this to look at the current or preceding school year only.
 
-I'l click the gear icon `(1)` on this level to open the filter popup, from which I can adjust the selected included school years. In this case, let's add the prior school year `(2)`.
+I'll click the gear icon `(1)` on this level to open the filter popup, from which I can adjust the selected included school years. In this case, let's add the prior school year `(2)`.
 
 ![Edit Filter](img/explorer-ada-to-date-exploration-edit-filter.png)
 
@@ -129,7 +129,7 @@ The third level in this example applies a categorization to the data; in this ca
 
 ![Edit Category](img/explorer-ada-to-date-exploration-edit-category.png)
 
-### Working With the Exploration
+### Working with the Exploration
 
 Notice that each level in the exploration include an automatically generated title that describes the applied action. Also, on the right side of each level are three icons. You're already familiar with the gear icon. The double-chevron point up will collapse the level by hiding the chart. For more complex explorations this can be particularly useful by minimizing the vertical space used by levels that you're not interested in looking at. Note that from the sidebar, there is also a command to expand or collapse all levels at once.
 
@@ -145,7 +145,7 @@ Clicking OK, closes the popup and updates the exploration to include a tabbed in
 
 ![Edit Category](img/explorer-ada-to-date-exploration-tabs.png)
 
-See how the the existing School Type category below the filter is preserved, and the new grade level category is displayed. There's no technical limit on how many tabs you can add, although things will probably start to get confusing after 5 or so.
+See how the existing School Type category below the filter is preserved, and the new grade level category is displayed. There's no technical limit on how many tabs you can add, although things will probably start to get confusing after 5 or so.
 
 ### Disaggregating
 
@@ -206,7 +206,7 @@ When analyzing student-related information, the "Student" category should be sel
 
 ```eval_rst
 .. note:: 
-   To decide which category to choose in other situations, it is helpful to understand the :ref:`OLAP concepts<technical-olap-concepts>` used by D3. When using the Advanced Filter you are connecting measures from two fact tables. The category to be selected is the common dimension shared by those tables that represents the main subject of both measures. 
+   To decide which category to choose in other situations, it is helpful to understand the :ref:`OLAP concepts<technical-olap-concepts>` used by D3. When using the Advanced Filter, you are connecting measures from two fact tables. The category to be selected is the common dimension shared by those tables that represents the main subject of both measures. 
 ```
 
 ![Advanced Filter Selected Category](img/explorer-adv-filter-category.png)
@@ -248,7 +248,7 @@ Items in the Modify section apply to the selected exploration level.
 
 #### Edit
 
-The Edit option within the Modify section of the sidebar allows the user to change the configuration of the selected level. For example if the selected level is categorized by Campus Type, the user can click Edit to change this to Campus; this causes the current chart to be redrawn showing values for each campus, instead of each campus type. For another example, consider the current chart is showing top 5 campuses for ADA; the user can change this to bottom 5 or 3 by clicking on Edit then changing the "Top n" settings.
+The Edit option within the Modify section of the sidebar allows the user to change the configuration of the selected level. For example, if the selected level is categorized by Campus Type, the user can click Edit to change this to Campus; this causes the current chart to be redrawn showing values for each campus, instead of each campus type. For another example, consider the current chart is showing top 5 campuses for ADA; the user can change this to bottom 5 or 3 by clicking on Edit then changing the "Top n" settings.
 
 #### Sort By
 
@@ -274,7 +274,7 @@ The "Data view" option is a toggle switch that changes the view of the selected 
 
 ![Data View Toggle](img/explorer-data-view.png)
 
-In some cases, when data view is enabled, an additional option called "Show additional columns" appears in the sidebar immediately below. Click the down arrow on the right-side to expand this option to select one ore more additional fields to include in the view view results. The available columns in the list are dynamically determined based on categorization of the current level. If the "Show additional columns" is not available in data view, it is because there are no additional column available to show for the selected category.
+In some cases, when data view is enabled, an additional option called "Show additional columns" appears in the sidebar immediately below. Click the down arrow on the right-side to expand this option to select one or more additional fields to include in the view results. The available columns in the list are dynamically determined based on categorization of the current level. If the "Show additional columns" is not available in data view, it is because there are no additional columns available to show for the selected category.
 
 This additional columns feature is particularly useful when you drill-down to individual students.
 
@@ -297,7 +297,7 @@ To undo the Clear action, click on the D3 back arrow button (located in the top 
 
 #### Expand / Collapse All
 
-This option enables collapsing or expanding all explorations at once. Here is a an exploration with all levels collapsed:
+This option enables collapsing or expanding all explorations at once. Here is an exploration with all levels collapsed:
 
 ![Collapse All Levels](img/explorer-collapse-all.png)
 
@@ -307,18 +307,17 @@ The "Send to" option expand a sub-menu with various options for saving and shari
 
 ![Send To Menu](img/explorer-send-to.png)
 
-* **Printer**: Allows the user to print the current exploration in its entirety with all steps and resulting charts. The user is presented with the Print dialogue box to select the printer. 
+* **Printer**: Allows the user to print on-screen the visual representation of the current exploration. The user is presented with the Print dialogue box to select the printer. 
 
-* **Email**: Allows the user to email the current exploration in its entirety with all steps and resulting charts. This invokes a dialogue box that asks the user to enter one or more email addresses, a subject line, and a message. Upon clicking Submit, the email is sent with the selected exploration as a jpg attachment.
+* **Email**: Allows the user to email the current exploration. This invokes a dialog box that asks the user to enter one or more email addresses, a subject line, and an optional message. The type of attachment defaults to an image, but can be changed to a PDF or an Excel spreadsheet. Upon clicking Submit, the email is sent with the selected exploration attached in the selected format. Note that the image and PDF options will attach a visual representation of the exploration, whereas the Excel option attaches the information as tabular data.
 
-* **Save as image**: Allows the user to save the current exploration as a jpg image to any drive attached to the user’s local device. The image can later be inserted in documents as needed for internal or external district/campus communications.
+* **Save as image**: Allows the user to save the current exploration as an image. The file is downloaded as "Data Exploration.png". This format is most useful when the image needs to be inserted in documents.
 
-* **Save as PDF**: Allows the user to save the current exploration as a PDF document. The user is presented with the Save as dialogue box where the user can select the name of the desired PDF file as well as the drive and folder where to save the PDF file.
+* **Save as PDF**: Allows the user to save the current exploration as a PDF document. The file is downloaded as "Data Exploration.pdf".
 
-* **Export to Excel**: Allows the user to export the data for the current exploration in its entirety with all steps and resulting charts to Excel. The data is saved into the first tab within the Excel file. 
-When the user selects Export to Excel, an Excel file is created with a generic name and is downloaded to the local device’s Downloads folder. You can navigate to the file and open it or use browser to view it.
+* **Export to Excel**: Selecting this option will present the choice of exporting the entire exploration or just the currently selected level. After choosing the applicable option, the Excel file is saved.
 
-*  **Get link**: Provides a URL link that can be saved or shared with other authorized users. When an authorized user clicks on the link, the user is navigated directly to the exploration automatically.
+*  **Get link**: Provides a URL link that can be saved or shared with other authorized users. When an authorized user clicks on the link, the user is navigated to the exploration automatically.
 
 ```eval_rst
 .. note::

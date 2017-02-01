@@ -31,6 +31,27 @@ Today, D3 captured daily attendance information only. This information is also u
 
 We will be introducing a new approach for enrollment and attendance tracking that supports per-period attendance records. Availability of this additional information will enable new dimensions of student analysis on the impact that absence has on student behavior and performance, as well as provide useful reporting capabilities to teachers for individual classes or courses.
 
+## December 2016 Release
+
+<p class="new featured"><span class="label"></span>2016 accountability ratings and TAPR information now available</p>
+
+2016 school data, published by the Texas Education Agency, has been imported into D3. Take a moment to review more than 100 charts available in the TAPR dashboards to review your district's academic performance relative to comparable districts.
+
+![2016 TAPR Data](img/201612-tapr-updates.png)
+
+<p class="new"><span class="label"></span>Retain criteria when changing watch list type</p>
+
+There's nothing worse than setting up your finely tuned criteria for a dynamic watch list, then deciding to change it to point-based and having to setup the criteria details again. With this enhancement, your configuration details are now preserved when you change the watch list type.
+
+<p class="new"><span class="label"></span>All watch list criteria fields now support selection of multiple items</p>
+
+The ability to choose multiple criteria for Campus, Grade Level, Days Absent, and Out-of-School Suspensions is now implemented. Now, all fields support creation of multiple criteria.
+
+<p class="fixed"><span class="label"></span>Watch lists with large amount of data are not loaded in preview tab (#35467)</p>
+<p class="fixed"><span class="label"></span>Error message is displayed when clicking cancel button in Send to modal (#3548)</p>
+<p class="fixed"><span class="label"></span>Formatted values in y-axis incorrect in some charts (e.g. SMI %Student Meeting Expected Growth (#3497)</p>
+<p class="fixed"><span class="label"></span>Repeatedly selecting and unselecting filters causes loss of synchronization with displayed chart information (#3477)</p>
+
 ## November 2016 Release
 
 <p class="new featured"><span class="label"></span>Apply Global KPIs to Categorical Charts</p>

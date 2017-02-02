@@ -4,6 +4,10 @@
 
 New features we're working on for upcoming releases include:
 
+<p class="upcoming"><span class="label"></span>Teacher Scorecard</p>
+
+The new teacher scorecard will provide a unique perspective on performance specifically for students in the selected teacher's classroom.
+
 <p class="upcoming"><span class="label"></span>Watch List Results Redesign</p>
 
 After completing the redesign for watch list creation, we've now begun focusing on redesigning the way watch list results are displayed. Major changes include:
@@ -24,16 +28,48 @@ To address this, we are introducing local data management capabilities to D3, de
 * **Attribute maintenance example**: The School file gets imported into D3 with some missing metadata fields. The customer updates missing metadata using D3 Local Data Maintenance. Next time the School file gets imported, the metadata in D3 should not get overwritten with empty values from the file.
 
 * **File maintenance example** The Action Category file is missing in the file import, and thus ActionCategoryCode has no values in the ActionType file. Using D3 Local Data Maintenance, the customer first creates action categories, then assigns action categories to the existing ActionTypes. Next time the ActionType file gets imported, action category codes do not get overwritten. 
-
+-->
 <p class="upcoming"><span class="label"></span>More Granular Attendance Tracking</p>
 
-Today, D3 captured daily attendance information only. This information is also used in conjunction with the school calendar to identify student enrollment metrics. 
+Today, D3 captures daily attendance information only. This information is also used in conjunction with the school calendar to identify student enrollment metrics. 
 
 We will be introducing a new approach for enrollment and attendance tracking that supports per-period attendance records. Availability of this additional information will enable new dimensions of student analysis on the impact that absence has on student behavior and performance, as well as provide useful reporting capabilities to teachers for individual classes or courses.
 
+## January 2017 Release
+
+<p class="new featured"><span class="label"></span>New Dashboards for Daily Attendance</p>
+
+D3 now recognizes two kinds of daily attendance tracking, which are represented in the Attendance and ADA dashboards. The first dashboard reports on students that are included in total attendance counts. The second dashboard reports specifically on the ADA (Average Daily Attendance) funding metric.
+
+![Attendance and ADA](img/201701-attendance-ada.png)
+
+<p class="new featured"><span class="label"></span>Section 504 Mapping from Skyward</p>
+
+Skyward includes dedicated Special Education module that supports Texas Education Agency requirements for public schools. Private schools, however, may instead use the Section 504 Module as a more lightweight solution for managing compliance of special education requirements. For applicable customers, D3 now supports a configured setting to automatically map Section 504 data into our Special Education dataset.
+
+<p class="new featured"><span class="label"></span>New Filename Convention for Files Exported from Explorer</p>
+
+Previously, exporting an exploration to Excel produced a filename consisted of numbers representing the date and time, and exporting to PDF or PNG used a file name of "Data Exploration". Now, all formats are treated the same. When a new exploration is exported, it will have the name "Unsaved Exploration", and when an existing exploration is exported, the filename will be the name of the saved exploration.
+
+<p class="new featured"><span class="label"></span>Align Discipline Disproportionality to TEA Submission Specifications</p>
+
+1. Enrollment counts used in discipline disproportionality calculation now uses the total number of distinct students enrolled at any time during the school year (instead of enrollment as-of last day of school).
+
+2. In case of multiple actions within categories of ISS, OSS, and DAEP, count a maximum of one-time per incident for each category.
+
+<p class="fixed"><span class="label"></span>Default school filter settings not updated when user's role changed (#3742)</p>
+<p class="fixed"><span class="label"></span>Details of complex search criteria are not shown in watch list sidebar configuration section (#3734)</p>
+<p class="fixed"><span class="label"></span>Missing attachment when sending by email export of chart in Excel format (#3720)</p>
+<p class="fixed"><span class="label"></span>SMI student count measure has incorrect format (#3708)</p>
+<p class="fixed"><span class="label"></span>Some SMI charts show no data when looking at prior school years (#3707)</p>
+<p class="fixed"><span class="label"></span>Some search criteria not persisted after editing existing watch list (#3699)</p>
+<p class="fixed"><span class="label"></span>Search button on criteria step of static watch list causes error (#3684)</p>
+<p class="fixed"><span class="label"></span>Error launching explorer from scorecard grid (#3669)</p>
+<p class="fixed"><span class="label"></span>Use KPI color coding standard for SMI scorecard grids (#3668)</p>
+
 ## December 2016 Release
 
-<p class="new featured"><span class="label"></span>2016 accountability ratings and TAPR information now available</p>
+<p class="new featured"><span class="label"></span>2016 Accountability Ratings and TAPR Information Now Available</p>
 
 2016 school data, published by the Texas Education Agency, has been imported into D3. Take a moment to review more than 100 charts available in the TAPR dashboards to review your district's academic performance relative to comparable districts.
 

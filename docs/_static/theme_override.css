@@ -78,9 +78,10 @@ p .label {
 }
 p.new.featured {
     font-weight: bold;
+    font-size: 1.3em;
 }
 p.fixed, p.new, p.upcoming {
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 /*

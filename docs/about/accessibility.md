@@ -9,4 +9,4 @@ For the most basic, text-driven web experiences, these technologies work well, a
 
 We are committed to a continued investment in supporting assistive technologies to better aid disabled D3 users. We are working towards providing things like full keyboard support, high-contrast visual elements, text-based equivalents of non-text elements and by adhering to standards like WAI-ARIA, WCAG 2.0, and Section 508.
 
-The web development technologies used to build D3 were chosen in part because of their recognition and commitment to including accessibility support. For more details, see `Bootstrap Accessibility <http://getbootstrap.com/getting-started/#accessibility>`_ and `Kendo UI Accessibility <http://docs.telerik.com/kendo-ui/accessibility/accessibility-overview>`_.
+The web development technologies used to build D3 were chosen in part because of their recognition and commitment to including accessibility support. For more details, see [Bootstrap Accessibility](http://getbootstrap.com/getting-started/#accessibility) and [Kendo UI Accessibility](http://docs.telerik.com/kendo-ui/accessibility/accessibility-overview).

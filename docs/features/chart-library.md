@@ -15,13 +15,17 @@ The chart library is organized into sections, such as Academics, Finance, and Hu
 ```eval_rst
 .. _features-my-items:
 ```
-## My Items
+## My Items Folder
 
 The first item in the chart library is called "My Items". This is a folder that contains all the personal charts and dashboards created by you.
 
 ```eval_rst 
 .. warning::
    The "My Items" folder is not displayed until you create your first personal item.
+```
+
+```eval_rst
+:ref:`Learn more <features-my-items>` about creating and managing your charts and dashboards in the My Items folder.
 ```
 
 ## About Charts and Dashboards

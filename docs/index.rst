@@ -39,6 +39,7 @@ The main documentation for D3 is organized into the following sections:
 
    features/favorites
    features/chart-library
+   features/my-items
    features/scorecards
    features/data-explorer
    features/watchlists

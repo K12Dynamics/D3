@@ -122,6 +122,19 @@ Core roles are automatically setup for each D3 implementation. They are the most
             <td>
             </td>
         </tr>
+        <tr>
+            <td>Team Leader</td>
+            <td>Campus + Grade Level</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>
+                Attendance/Enrollment<br>
+                Performance<br>
+                Discipline<br>
+            </td>
+            <td>
+            </td>
+        </tr>
     </tbody>
 </table>
 </div>

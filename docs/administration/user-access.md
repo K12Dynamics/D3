@@ -37,6 +37,21 @@ Core roles are automatically setup for each D3 implementation. They are the most
     </thead>
     <tbody>
         <tr>
+            <td>Cabinet</td>
+            <td>District</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>
+                Attendance/Enrollment<br>
+                Performance<br>
+                Discipline<br>
+                HR<br>
+                Finance<br>
+                TAPR<br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
             <td>Board</td>
             <td>District</td>
             <td>Yes</td>
@@ -50,23 +65,8 @@ Core roles are automatically setup for each D3 implementation. They are the most
             <td></td>
         </tr>
         <tr>
-            <td>Cabinet</td>
-            <td>District</td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>
-                Attendance/Enrollment<br>
-                Performance<br>
-                Discipline<br>
-                Human Resources<br>
-                Finance<br>
-                TAPR<br>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
             <td>District Administrator</td>
-            <td>Campus</td>
+            <td>District</td>
             <td>Yes</td>
             <td>Yes</td>
             <td>
@@ -83,15 +83,12 @@ Core roles are automatically setup for each D3 implementation. They are the most
             </td>
         </tr>
         <tr>
-            <td>District Manager</td>
-            <td>Campus</td>
+            <td>District HR</td>
+            <td>District</td>
             <td>Yes</td>
-            <td>Yes</td>
+            <td>No</td>
             <td>
-                Attendance/Enrollment<br>
-                Performance<br>
-                Discipline<br>
-                Finance<br>
+                HR<br>
             </td>
             <td>
             </td>
@@ -111,6 +108,20 @@ Core roles are automatically setup for each D3 implementation. They are the most
             </td>
         </tr>
         <tr>
+            <td>District Manager</td>
+            <td>Campus</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>
+                Attendance/Enrollment<br>
+                Performance<br>
+                Discipline<br>
+                Finance<br>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
             <td>Teacher</td>
             <td>Classroom</td>
             <td>Yes</td>
@@ -123,7 +134,7 @@ Core roles are automatically setup for each D3 implementation. They are the most
             </td>
         </tr>
         <tr>
-            <td>Team Leader</td>
+            <td>Team Leader<br><i>(coming soon)</i></td>
             <td>Campus + Grade Level</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -157,6 +168,53 @@ Additional roles are setup as needed to support customized access requirements.
     </thead>
     <tbody>
         <tr>
+            <td>District Academics</td>
+            <td>District</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>
+                Attendance/Enrollment<br>
+                Performance<br>
+                Discipline<br>
+                TAPR<br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Curriculum and Instruction</td>
+            <td>District</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>
+                Attendance/Enrollment<br>
+                Performance<br>
+                Discipline<br>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Education Director</td>
+            <td>District</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>
+                Attendance/Enrollment<br>
+                Performance<br>
+                Discipline<br>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>Truancy Office</td>
+            <td>District</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>&lt;None&gt;</td>
+            <td>
+            </td>
+        </tr>
+        <tr>
             <td>Attendance Office</td>
             <td>District</td>
             <td>No</td>
@@ -188,73 +246,13 @@ Additional roles are setup as needed to support customized access requirements.
             <td></td>
         </tr>
         <tr>
-            <td>Curriculum and Instruction</td>
-            <td>District</td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>
-                Attendance/Enrollment<br>
-                Performance<br>
-                Discipline<br>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>District Academics</td>
-            <td>Campus</td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>
-                Attendance/Enrollment<br>
-                Performance<br>
-                Discipline<br>
-                TAPR<br>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Education Director</td>
-            <td>District</td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>
-                Attendance/Enrollment<br>
-                Performance<br>
-                Discipline<br>
-            </td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td>HR Cabinet</td>
-            <td>District</td>
-            <td>Yes</td>
-            <td>No</td>
-            <td>
-                Performance<br>
-                HR<br>
-            </td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td>HR Principal</td>
+            <td>Campus HR</td>
             <td>Campus</td>
             <td>Yes</td>
             <td>No</td>
             <td>
-                Performance<br>
                 HR<br>
             </td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td>Truancy Office</td>
-            <td>District</td>
-            <td>No</td>
-            <td>Yes</td>
-            <td>&lt;None&gt;</td>
             <td>
             </td>
         </tr>

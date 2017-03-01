@@ -1,7 +1,6 @@
 ```eval_rst
 .. _features-chart-library:
 ```
-
 # Chart Library
 
 ## Introduction

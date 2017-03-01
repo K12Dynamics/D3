@@ -126,7 +126,7 @@ To achieve green status, the current value must exceed the goal when a Minimum i
 ### KPI Information 
 Information about a specific KPI is available in the Actions menu for the selected scorecard KPI. The information displayed includes: 
 
-![KPI_information](img/KPI_information)
+![KPI_information](img/KPI_information.png)
 
 ![how_to_view_KPI_information](img/how_to_view_KPI_information.PNG)
 

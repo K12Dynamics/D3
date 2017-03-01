@@ -37,6 +37,24 @@ Core roles are automatically setup for each D3 implementation. They are the most
     </thead>
     <tbody>
         <tr>
+            <td>District Administrator</td>
+            <td>District</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>
+                Attendance/Enrollment<br>
+                Performance<br>
+                Discipline<br>
+                Human Resources<br>
+                Finance<br>
+                TAPR<br>
+            </td>
+            <td>
+                Impersonate<br>
+                Publish Watch Lists<br>
+            </td>
+        </tr>
+        <tr>
             <td>Cabinet</td>
             <td>District</td>
             <td>Yes</td>
@@ -60,12 +78,13 @@ Core roles are automatically setup for each D3 implementation. They are the most
                 Attendance/Enrollment<br>
                 Performance<br>
                 Discipline<br>
+                HR<br>
                 Finance<br>
             </td>
             <td></td>
         </tr>
         <tr>
-            <td>District Administrator</td>
+            <td>District Manager</td>
             <td>District</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -73,13 +92,10 @@ Core roles are automatically setup for each D3 implementation. They are the most
                 Attendance/Enrollment<br>
                 Performance<br>
                 Discipline<br>
-                Human Resources<br>
                 Finance<br>
                 TAPR<br>
             </td>
             <td>
-                Impersonate<br>
-                Publish Watch Lists<br>
             </td>
         </tr>
         <tr>
@@ -102,21 +118,8 @@ Core roles are automatically setup for each D3 implementation. They are the most
                 Attendance/Enrollment<br>
                 Performance<br>
                 Discipline<br>
-                HR<br>
-            </td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td>District Manager</td>
-            <td>Campus</td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>
-                Attendance/Enrollment<br>
-                Performance<br>
-                Discipline<br>
                 Finance<br>
+                HR<br>
             </td>
             <td>
             </td>
@@ -129,6 +132,21 @@ Core roles are automatically setup for each D3 implementation. They are the most
             <td>
                 Attendance/Enrollment<br>
                 Performance<br>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <!--
+        <tr>
+            <td>Campus Director<br><i>(coming soon)</i></td>
+            <td>Campus + Grade Level(s)</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>
+                Attendance/Enrollment<br>
+                Performance<br>
+                Discipline<br>
+                HR<br>
             </td>
             <td>
             </td>
@@ -146,6 +164,7 @@ Core roles are automatically setup for each D3 implementation. They are the most
             <td>
             </td>
         </tr>
+        -->
     </tbody>
 </table>
 </div>

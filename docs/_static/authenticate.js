@@ -23,7 +23,7 @@
         document.cookie = key + "=true";
         window.location.href = "/";
     } else if (!getCookie(key)) {
-        window.location.href = "/_static/access-denied.html";
+        window.location.href = "/en/latest/_static/access-denied.html";
     }
 
 })(window);

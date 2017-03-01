@@ -363,7 +363,7 @@ Click the `Sort by` item to see available choices for sorting the items in the s
 * **Category**: Organizes the chart items alphabetically according to the category names.
 
 #### Data View
-The Data View option within the Modify section allows the user to change the display from chart to data grid. This allows the user to see the underlying data of the chart in tabular form. Below is an example of changing from chart to data view of ADA % for each campus. 
+The Data View option within the Modify section allows the user to change the display from chart to data grid. This allows the user to see the underlying data of the chart in tabular form. Below is an example of changing from chart to data view for one of the charts on the ADA dashboard. 
 
 ![Switching to Data View](img/chart-data-view.png)
 

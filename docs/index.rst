@@ -18,8 +18,10 @@ The main documentation for D3 is organized into the following sections:
 
 * :ref:`getting-started-section` - *New users should begin here*
 * :ref:`features-section`
+* :ref:`guides-section`
 * :ref:`administration-section`
 * :ref:`technical-section`
+* :ref:`about-section`
 
 .. _getting-started-section:
 
@@ -46,6 +48,15 @@ The main documentation for D3 is organized into the following sections:
    features/kpis
    features/sharing
    features/settings
+
+.. _guides-section:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Data Guides
+   
+   guides/enrollment
+   guides/discretionary-discipline
 
 .. _administration-section:
 

@@ -13,7 +13,7 @@ There are two ways in which a user may login to D3. A district may elect to use 
 * **Single Sign-On**: Users can access D3 from their Intranet website by clicking on a pre-configured link. With this method, the D3 login screen is bypassed because a secure exchange of information occurs between the two sites to authenticate the user. To use single-sign-on requires some implementation work on the customer's Intranet website, which is explained in our D3 Integration Guide. You may request this document from your D3 account manager.
 
 
-* **Login Screen**: Users can access D3 directly, in which case they are prompted to enter a username and password. The first time a user accesses D3, they must enter their username provided by the district, and then enter a password to use with their account. For security purposes, the user is then sent an activation email to the email address provided by the district, which must be acknowledged before the user is granted the ability to login to D3.
+* **Login Screen**: Users can access D3 directly, in which case they are prompted to enter a username and password. The first time a user accesses D3, they must enter their username provided by the district, and then enter a password to use with their account. For security purposes, the user is then sent an activation email to the email address provided by the district, which must be acknowledged before the user is granted the ability to login to D3. Note: there is an alternate method of activation in case where a password is explicitly issued by the D3 support team. In this case, the user can login immediately; however, if not email address is recorded in their profile, they will be required to enter it before accessing D3.
 
 ## Available Roles
 

@@ -13,7 +13,7 @@
     }
 
     function getCookie(name) {
-        return document.cookie.replace(new RegExp("?:(?:^|.*;\s*)" + name + "\s*\=\s*([^;]*).*$)|^.*$"), "$1");
+        return document.cookie.replace(new RegExp("(?:(?:^|.*;\s*)" + name + "\s*\=\s*([^;]*).*$)|^.*$"), "$1");
     }
 
     debugger;

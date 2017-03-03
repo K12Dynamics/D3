@@ -26,7 +26,7 @@ Note that you can also just close your browser (or browser tab) to effectively l
 ## Common Dashboard Tasks
 
 ```eval_rst
-:ref:`How do I apply dashboard filters? <how-do-i-apply-dashboard-filter>`
+:ref:`How do I apply dashboard filters? <how-do-i-dashboard-apply-filter>`
 
 :ref:`How do I clear a dashboard filter? <how-do-i-dashboard-clear-filter>`
 

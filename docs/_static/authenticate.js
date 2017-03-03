@@ -23,7 +23,7 @@
         return null;
     }
 
-    debugger;
+    //debugger;
     var key = "authorized";
 
     if (getParameterByName(key)) {

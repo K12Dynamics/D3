@@ -30,9 +30,7 @@
         document.cookie = key + "=true";
         window.location.href = "/en/latest";
     } else if (!getCookie(key)) {
-        console.log("key=" + key)
-        console.log("denied");
-        //window.location.href = "/en/latest/_static/access-denied.html";
+        window.location.href = "/en/latest/_static/access-denied.html";
     }
 
 })(window);

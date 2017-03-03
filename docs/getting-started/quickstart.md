@@ -92,7 +92,7 @@ The items displayed in the sidebar will vary based on what type of visualization
 * Link to other tools within D3
 * Share and export the current visualization
 * Modify the visualization by applying filters, changing the view, of adjusting other settings
-* Manage other actions, such as making it your home screen or adding it to your favorities
+* Manage other actions, such as making it your home screen or adding it to your favorites
 
 ## Using on Mobile Devices
 

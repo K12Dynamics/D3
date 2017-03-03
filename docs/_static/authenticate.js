@@ -13,7 +13,7 @@
     }
 
     function getCookie(name) {
-        return document.cookie.replace(new RegExp("(?:(?:^|.*;\s*)" + name + "\s*\=\s*([^;]*).*$)|^.*$"), "$1");
+        return document.cookie.replace(new RegExp("?:(?:^|.*;\s*)" + name + "\s*\=\s*([^;]*).*$)|^.*$"), "$1");
     }
 
     debugger;
@@ -23,7 +23,9 @@
         document.cookie = key + "=true";
         window.location.href = "/";
     } else if (!getCookie(key)) {
-        window.location.href = "/en/latest/_static/access-denied.html";
+        console.log("key=" + key)
+        console.log("denied");
+        //window.location.href = "/en/latest/_static/access-denied.html";
     }
 
 })(window);

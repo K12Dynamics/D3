@@ -13,7 +13,14 @@
     }
 
     function getCookie(name) {
-        return document.cookie.replace(new RegExp("(?:(?:^|.*;\s*)" + name + "\s*\=\s*([^;]*).*$)|^.*$"), "$1");
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
     }
 
     debugger;
@@ -21,7 +28,7 @@
 
     if (getParameterByName(key)) {
         document.cookie = key + "=true";
-        window.location.href = "/";
+        window.location.href = "/en/latest";
     } else if (!getCookie(key)) {
         console.log("key=" + key)
         console.log("denied");

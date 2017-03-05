@@ -46,7 +46,6 @@ The main documentation for D3 is organized into the following sections:
    features/data-explorer
    features/watchlists
    features/kpis
-   features/sharing
    features/settings
 
 .. _guides-section:
@@ -57,6 +56,7 @@ The main documentation for D3 is organized into the following sections:
    
    guides/enrollment
    guides/discretionary-discipline
+   guides/tea-dashboards
 
 .. _administration-section:
 

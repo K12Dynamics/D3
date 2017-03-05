@@ -1,7 +1,6 @@
 ```eval_rst
 .. _features-data-explorer:
 ```
-
 # Data Explorer
 
 ## Introduction

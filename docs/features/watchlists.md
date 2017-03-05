@@ -181,5 +181,116 @@ Point-based dynamic watch list provide additional flexibility to identify studen
 
 ## Viewing Watch Lists
 
+Click an existing watch list from the fourth tab of the main menu to launch it:
+
+![Select Watch List](img/watchlist-select.png)
+
+A watch list provides two viewing modes:
+
+* **Current Watch List**: The set of students currently assigned to the watch list
+* **History**: An audit of additions to, and removals from, the watch list
+
+### Current Watch List View
+
+The Current Watch List view is selected by default.
+
+![View Watch List](img/watchlist-view.png)
+
+The columns displayed in a watch list depend on choices made in the watch list creation wizard.
+
+In all watch lists, the first column includes details about the student (or other entity). The next few are standard columns (in the image above, three standard columns are shown -- Attendance, Discipline, and Classroom Grades), followed by custom columns that are derived from the watch list criteria.
+
+The data in the standard columns can be adjusted for show counts over different time times by changing the selection in the button group above the watch list grid.
+
+Additional details for each watch list result are available by clicking the arrow on the left-side of any row.
+
+![View Watch List](img/watchlist-expanded-row.png)
+
+The expanded view includes:
+
+* **Student Column**: Displays the student's current grade, current school, gender, and race/ethinicity.
+* **Standard Columns**: Displays a distribution curve showing where current student's value in context of the population reported on, as well as additional related metrics.
+* **Criteria-Based Columns**: Displays details of the criteria item definition.
+
+```eval_rst
+.. tip::
+   The population of students reported in the distribution curves can be changed at any time by choosing a different value in the drop-down above the watch list grid.
+```
+
+Also in the Student column, are two action buttons. The scorecard button navigates to the student's scorecard. The criteria button displays a popup detailing the watch list criteria and how it was evaluated for the student, for example:
+
+![View Watch List Criteria](img/watchlist-dialog-criteria.png)
+
+### History View
+
+Select the second tab on the watch list screen to switch to the watch list history view.
+
+The history includes a record for each student that was added to or removed from the watch list since its creation.
+
+![Watch List History](img/watchlist-history.png)
+
+You can see the data when the addition or removal occurred, and using the text box on the top right you can search for specific students in the watch list history.
+
+There is also a button to visit the student's scorecard.
+
+```eval_rst
+.. _features-watchlists-publish:
+```
+
+## Publishing Watch Lists
+
+D3 includes a publish watch list capability, so that district administrators can create watch lists for other users in the organization.
+
+Start by clicking `Publish` in the sidebar while viewing a previously created watch list, then choose one or more roles or users to publish the watch list to.
+
+![Publish Watch List](img/watchlist-publish.png)
+
+Click the `Publish` button to apply your changes. A confirmed is then displayed.
+
+![Publish Watch List Successful](img/watchlist-publish-successful.png)
+
+You can click the link in the confirmation message to return to the watch list.
+
+```eval_rst
+.. warning::
+   Publishing a watch list replaces previously publishes information, so make sure that you always publish to all the users who should be able to use the watch list.
+```
+
+Users who the watch list has been published to will see the published item in a separate section under the Watch List main menu tab:
+
+![Published Watch List](img/watchlist-published.png)
+
+```eval_rst
+.. note::
+   A published watch list cannot be edited or deleted by the users who the watch lists were published to. To remove, the administrator must re-publish with an updated recipient list (or no recipients to un-publish from everyone).
+```
+
 ## Watch List Sidebar
 
+Uses can perform various actions or review configuration details for a selected watch list. These actions and details are available from the sidebar, which is opened by clicked in the double-left arrow icon, located at the top right of the application.
+
+![Watch List Sidebar](img/watchlist-sidebar.png)
+
+### Actions Section
+
+The Actions section provides the following capabilities:
+
+* **Edit**: Open the design wizard to modify the configuration of the watch list.
+
+* **Create snapshot**: Create a static watch list from a dynamic watch list with the current set of included students. You are prompted to provide the name of the new watch list.
+
+![Watch List Snapshot](img/watchlist-snapshot.png)
+
+* **Rename**: Give the watch list a new name. If the watch list is published, the published-to-users will see the new name as well.
+
+* **Delete**: Delete the watch list. You are prompted to confirm this action, since it cannot be undone.
+
+* **Publish**: Give others access to view the watch list.
+
+### Information Section
+
+The Information section indicated the type of watch list, who created it and when, and, for dynamic watch lists, the last time the watch list was calculated to re-evaluate the criteria.
+
+### Configuration Section
+
+The Configuration section describes the criteria defined for the watch list.

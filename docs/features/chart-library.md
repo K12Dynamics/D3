@@ -1,6 +1,7 @@
 ```eval_rst
-.. _features-chart-library:
+.. _features-library:
 ```
+
 # Chart Library
 
 ## Introduction
@@ -70,7 +71,6 @@ On smaller hand-held devices, charts are displayed in a single column. Each char
 Users can perform various actions on dashboards. These actions are available from the sidebar, which is activated by clicking the double-left arrow icon, located at the top right of the D3 screen. Actions applicable to the dashboard as a whole are enabled as shown below; disabled actions are reserved for selected charts only.
 
 ![Dashboard Actions](img/dashboard-sidebar.png)
-
 
 ```eval_rst
 .. tip ::
@@ -285,10 +285,11 @@ How do I make a dashboard become my home screen?
 
 Users can perform various actions on a selected chart. These actions are available from the sidebar, which is opened by clicking the double-left arrow icon, located at the top right of the application. Actions applicable to the selected chart are enabled as shown below. Actions are grouped into three sections: Actions, Modify, and Dashboard.
 
-### Chart Actions
-The Actions section provides tools to explore, save, and share the chart.
-
 ![Chart actions](img/chart-actions.png)
+
+### Chart Actions
+
+The Actions section provides tools to explore, save, and share the chart.
 
 * **View**: This option only appears in the dashboard screen when a chart is selected. It opens the selected chart to a full-size view.
 

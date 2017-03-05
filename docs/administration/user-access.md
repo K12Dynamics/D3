@@ -32,7 +32,6 @@ Core roles are automatically setup for each D3 implementation. They are the most
             <th>Access<br>Scorecards</th>
             <th>Access<br>Watch Lists</th>
             <th>Functional Areas</th>
-            <th>Administration</th>
         </tr>
     </thead>
     <tbody>
@@ -49,10 +48,6 @@ Core roles are automatically setup for each D3 implementation. They are the most
                 Finance<br>
                 TAPR<br>
             </td>
-            <td>
-                Impersonate<br>
-                Publish Watch Lists<br>
-            </td>
         </tr>
         <tr>
             <td>Cabinet</td>
@@ -67,7 +62,6 @@ Core roles are automatically setup for each D3 implementation. They are the most
                 Finance<br>
                 TAPR<br>
             </td>
-            <td></td>
         </tr>
         <tr>
             <td>Board</td>
@@ -81,7 +75,6 @@ Core roles are automatically setup for each D3 implementation. They are the most
                 HR<br>
                 Finance<br>
             </td>
-            <td></td>
         </tr>
         <tr>
             <td>District Manager</td>
@@ -95,8 +88,6 @@ Core roles are automatically setup for each D3 implementation. They are the most
                 Finance<br>
                 TAPR<br>
             </td>
-            <td>
-            </td>
         </tr>
         <tr>
             <td>District HR</td>
@@ -105,8 +96,6 @@ Core roles are automatically setup for each D3 implementation. They are the most
             <td>No</td>
             <td>
                 HR<br>
-            </td>
-            <td>
             </td>
         </tr>
         <tr>
@@ -121,8 +110,6 @@ Core roles are automatically setup for each D3 implementation. They are the most
                 Finance<br>
                 HR<br>
             </td>
-            <td>
-            </td>
         </tr>
         <tr>
             <td>Teacher</td>
@@ -132,8 +119,6 @@ Core roles are automatically setup for each D3 implementation. They are the most
             <td>
                 Attendance/Enrollment<br>
                 Performance<br>
-            </td>
-            <td>
             </td>
         </tr>
         <!--
@@ -148,8 +133,6 @@ Core roles are automatically setup for each D3 implementation. They are the most
                 Discipline<br>
                 HR<br>
             </td>
-            <td>
-            </td>
         </tr>
         <tr>
             <td>Team Leader<br><i>(coming soon)</i></td>
@@ -161,13 +144,20 @@ Core roles are automatically setup for each D3 implementation. They are the most
                 Performance<br>
                 Discipline<br>
             </td>
-            <td>
-            </td>
         </tr>
         -->
     </tbody>
 </table>
 </div>
+
+### District Administrator Capabilities
+
+The District Administrator role exclusively has access to perform the following administrative tasks:
+
+```eval_rst
+* Impersonate another user
+* :ref:`Publish watch lists <features-watchlists-publish>`
+```
 
 ### Additional Roles
 
@@ -182,7 +172,6 @@ Additional roles are setup as needed to support customized access requirements.
             <th>Access<br>Scorecards</th>
             <th>Access<br>Watch Lists</th>
             <th>Functional Areas</th>
-            <th>Administration</th>
         </tr>
     </thead>
     <tbody>
@@ -197,7 +186,6 @@ Additional roles are setup as needed to support customized access requirements.
                 Discipline<br>
                 TAPR<br>
             </td>
-            <td></td>
         </tr>
         <tr>
             <td>Curriculum and Instruction</td>
@@ -209,7 +197,6 @@ Additional roles are setup as needed to support customized access requirements.
                 Performance<br>
                 Discipline<br>
             </td>
-            <td></td>
         </tr>
         <tr>
             <td>Education Director</td>
@@ -221,8 +208,6 @@ Additional roles are setup as needed to support customized access requirements.
                 Performance<br>
                 Discipline<br>
             </td>
-            <td>
-            </td>
         </tr>
         <tr>
             <td>Truancy Office</td>
@@ -230,8 +215,6 @@ Additional roles are setup as needed to support customized access requirements.
             <td>No</td>
             <td>Yes</td>
             <td>&lt;None&gt;</td>
-            <td>
-            </td>
         </tr>
         <tr>
             <td>Attendance Office</td>
@@ -239,7 +222,6 @@ Additional roles are setup as needed to support customized access requirements.
             <td>No</td>
             <td>Yes</td>
             <td>&lt;None&gt;</td>
-            <td></td>
         </tr>
         <tr>
             <td>Campus Academics</td>
@@ -251,7 +233,6 @@ Additional roles are setup as needed to support customized access requirements.
                 Performance<br>
                 Discipline<br>
             </td>
-            <td></td>
         </tr>
         <tr>
             <td>Campus Department Head</td>
@@ -262,7 +243,6 @@ Additional roles are setup as needed to support customized access requirements.
                 Attendance/Enrollment<br>
                 Performance<br>
             </td>
-            <td></td>
         </tr>
         <tr>
             <td>Campus HR</td>
@@ -271,8 +251,6 @@ Additional roles are setup as needed to support customized access requirements.
             <td>No</td>
             <td>
                 HR<br>
-            </td>
-            <td>
             </td>
         </tr>
     </tbody>

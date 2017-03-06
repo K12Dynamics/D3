@@ -245,7 +245,11 @@ Start by clicking `Publish` in the sidebar while viewing a previously created wa
 
 ![Publish Watch List](img/watchlist-publish.png)
 
-Click the `Publish` button to apply your changes. A confirmed is then displayed.
+If there are a lot of D3 users in your organization, a search box is displayed above the list of users. Use this to locate applicable users:
+
+![Publish Watch List](img/watchlist-publish-filter.png)
+
+Click the `Publish` button to apply your changes. A confirmation is then displayed.
 
 ![Publish Watch List Successful](img/watchlist-publish-successful.png)
 

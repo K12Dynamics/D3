@@ -253,7 +253,7 @@ You can click the link in the confirmation message to return to the watch list.
 
 ```eval_rst
 .. warning::
-   Publishing a watch list replaces previously publishes information, so make sure that you always publish to all the users who should be able to use the watch list.
+   Publishing a watch list replaces previously published information, so make sure that you always publish to all the users who should be able to use the watch list.
 ```
 
 Users who the watch list has been published to will see the published item in a separate section under the Watch List main menu tab:

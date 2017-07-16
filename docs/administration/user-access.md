@@ -27,7 +27,7 @@ Core roles are automatically setup for each D3 implementation. They are the most
 <table class="docutils">
     <thead>
         <tr>
-            <th>Role Name</th>
+            <th>Role Name / <i>Code</i></th>
             <th>Scope</th>
             <th>Access<br>Scorecards</th>
             <th>Access<br>Watch Lists</th>
@@ -36,7 +36,7 @@ Core roles are automatically setup for each D3 implementation. They are the most
     </thead>
     <tbody>
         <tr>
-            <td>District Administrator</td>
+            <td>District Administrator<br><i>districtadmin</i></td>
             <td>District</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -50,7 +50,7 @@ Core roles are automatically setup for each D3 implementation. They are the most
             </td>
         </tr>
         <tr>
-            <td>Cabinet</td>
+            <td>Cabinet<br><i>cabinet</i></td>
             <td>District</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -64,7 +64,7 @@ Core roles are automatically setup for each D3 implementation. They are the most
             </td>
         </tr>
         <tr>
-            <td>Board</td>
+            <td>Board<br><i>board</i></td>
             <td>District</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -77,7 +77,7 @@ Core roles are automatically setup for each D3 implementation. They are the most
             </td>
         </tr>
         <tr>
-            <td>District Manager</td>
+            <td>District Manager<br><i>districtmgr</i></td>
             <td>District</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -90,7 +90,7 @@ Core roles are automatically setup for each D3 implementation. They are the most
             </td>
         </tr>
         <tr>
-            <td>District HR</td>
+            <td>District HR<br><i>hrcabinet</i></td>
             <td>District</td>
             <td>Yes</td>
             <td>No</td>
@@ -99,7 +99,7 @@ Core roles are automatically setup for each D3 implementation. They are the most
             </td>
         </tr>
         <tr>
-            <td>Principal</td>
+            <td>Principal<br><i>principal</i></td>
             <td>Campus</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -112,13 +112,24 @@ Core roles are automatically setup for each D3 implementation. They are the most
             </td>
         </tr>
         <tr>
-            <td>Teacher</td>
+            <td>Teacher<br><i>teacher</i></td>
             <td>Classroom</td>
             <td>Yes</td>
             <td>Yes</td>
             <td>
                 Attendance/Enrollment<br>
                 Performance<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Team Leader<br><i>teamleader</i></td>
+            <td>Grade Level</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>
+                Attendance/Enrollment<br>
+                Performance<br>
+                Discipline<br>
             </td>
         </tr>
         <!--
@@ -167,7 +178,7 @@ Additional roles are setup as needed to support customized access requirements.
 <table class="docutils">
     <thead>
         <tr>
-            <th>Role Name</th>
+            <th>Role Name / <i>Code</i></th>
             <th>Scope</th>
             <th>Access<br>Scorecards</th>
             <th>Access<br>Watch Lists</th>
@@ -176,7 +187,7 @@ Additional roles are setup as needed to support customized access requirements.
     </thead>
     <tbody>
         <tr>
-            <td>District Academics</td>
+            <td>District Academics<br><i>dacademics</i></td>
             <td>District</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -188,7 +199,7 @@ Additional roles are setup as needed to support customized access requirements.
             </td>
         </tr>
         <tr>
-            <td>Curriculum and Instruction</td>
+            <td>Curriculum and Instruction<br><i>candi</i></td>
             <td>District</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -199,7 +210,7 @@ Additional roles are setup as needed to support customized access requirements.
             </td>
         </tr>
         <tr>
-            <td>Education Director</td>
+            <td>Education Director<br><i>education</i></td>
             <td>District</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -210,21 +221,21 @@ Additional roles are setup as needed to support customized access requirements.
             </td>
         </tr>
         <tr>
-            <td>Truancy Office</td>
+            <td>Truancy Office<br><i>truancy</i></td>
             <td>District</td>
             <td>No</td>
             <td>Yes</td>
             <td>&lt;None&gt;</td>
         </tr>
         <tr>
-            <td>Attendance Office</td>
+            <td>Attendance Office<br><i>attendance</i></td>
             <td>District</td>
             <td>No</td>
             <td>Yes</td>
             <td>&lt;None&gt;</td>
         </tr>
         <tr>
-            <td>Campus Academics</td>
+            <td>Campus Academics<br><i>cacademics</i></td>
             <td>Campus</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -235,7 +246,7 @@ Additional roles are setup as needed to support customized access requirements.
             </td>
         </tr>
         <tr>
-            <td>Campus Department Head</td>
+            <td>Campus Department Head<br><i>campusdepthead</i></td>
             <td>Campus</td>
             <td>Yes</td>
             <td>Yes</td>
@@ -245,7 +256,7 @@ Additional roles are setup as needed to support customized access requirements.
             </td>
         </tr>
         <tr>
-            <td>Campus HR</td>
+            <td>Campus HR<br><i>hrprincipal</i></td>
             <td>Campus</td>
             <td>Yes</td>
             <td>No</td>
@@ -256,3 +267,37 @@ Additional roles are setup as needed to support customized access requirements.
     </tbody>
 </table>
 </div>
+
+### Scope Configuration
+
+D3 automatically identifies the subset of students available to the user as follows:
+
+<div class="wy-table-responsive">
+<table class="docutils">
+    <thead>
+        <tr>
+            <th>Scope</th>
+            <th>Student Subset Available</th>
+        <tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>District</td>
+            <td>All students</td>
+        </tr>
+        <tr>
+            <td>Campus</td>
+            <td>Students enrolled at the campus identified by the SchoolCode value in the User file.</td>
+        </tr>
+        <tr>
+            <td>Classroom</td>
+            <td>Students in classes taught by the teacher.</td>
+        </tr>
+        <tr>
+            <td>Grade Level</td>
+            <td>Students enrolled at the campus identified by the SchoolCode value in the User file and enrolled in the grade level identified by the GradeLevelCode value in the User file.</td>
+        </tr>
+    </tbody>
+</table>
+
+The Campus and Grade Level roles use information in the imported User file to identify the specific scope of the user. If more complex scope configurations are required, this information can be provided in the UserAccess file instead.

@@ -1,39 +1,161 @@
 # Release History
+<!--
+## May 2017 Release
 
-## Upcoming 
+### Improve Popular Categories in Explorer
 
-New features we're working on for upcoming releases include:
+### KPIs in Explorer
 
-<p class="upcoming"><span class="label"></span>Teacher Scorecard</p>
+Charts
 
-The new teacher scorecard will provide a unique perspective on performance specifically for students in the selected teacher's classroom.
+### Academic Skills Dashboard
 
-<p class="upcoming"><span class="label"></span>Watch List Results Redesign</p>
+<p class="fixed"><span class="label"></span>In specific situation, redirects to Forgot Password after successful login (#4418)</p>
+<p class="fixed"><span class="label"></span>Scorecard grids with many columns compress cell information when year-over-year overlay active (#4385)</p>
+<p class="fixed"><span class="label"></span>Do not show Other category if is has only one item (#4377)</p>
+<p class="fixed"><span class="label"></span>Some charts show an error for the District HR and Campus HR roles (#4632)</p>
+-->
 
-After completing the redesign for watch list creation, we've now begun focusing on redesigning the way watch list results are displayed. Major changes include:
+## April 2017 Release
+
+<p class="new featured"><span class="label"></span>Configurable "Other" Category for Pie Charts</p>
+
+When a pie chart displays a lot of categories, the smaller slices can cause the pie chart to be difficult to read. To overcome this, small values are automatically grouped together in an Other category.
+
+This is enabled by default for most pie charts. You can turn on or off this behavior for individual pie-charts from the sidebar, as well as set the threshold percentage value for grouping smaller values together.
+
+The sidebar legend has been enhanced to enumerate the individual items in the Other category, so you can still view these details but in a more readable format.
+
+![Pie Chart Other Category](img/201704-piechart-custom-other-category.png)
+
+<p class="new featured"><span class="label"></span>Improved Support for Grading Period Grades</p>
+
+Our grading period grade capture details has been overhauled to provide increased flexibility in the types of grades that can be captured. Previously, we supported a rather rigid interpretation that worked well for some student information systems, but not others. The new design provides the following new capabilities:
+
+* Capture of many types of grades used with grading period: progress reports, grading period grade, semester average, semester exam, semester grade, final exam, and final grade.
+* Optional association of a grade to the skill that was taught.
+* Labels for each grade, such as PR1 and PR2 for progress reports.
+* Support for both numeric and non-numeric grades via a new dimension called grade marks.
+
+![Grading Period Grade Spec](img/201704-grading-period-grade-spec.png)
+
+<p class="new featured"><span class="label"></span>Hide legend for pie charts in Explorer when insufficient space available</p>
+
+The Explorer tool provides a lot of flexibility in drilling down on your data in various ways. We do our best to intelligently display the resulting chart in the most readable format possible. However, sometimes, something like the following happens!
+
+![Explorer Pie Chart Hide Legend](img/201704-piechart-explorer-hide-legend.png)
+
+Clearly, using a pie chart with this many categories does not work well because the legend fills the entire space and the pie chart itself is almost invisible. To resolve this, we now automatically hide the legend from the inline view when there are a lot of categories. In this case, you can still view the legend information by opening the sidebar.
+
+<p class="new featured"><span class="label"></span>Hide Unused Filters</p>
+
+If your organization doesn't use a particular filter, it's now possible to hide it from view. For example, your number of schools is small, it may be superfluous to categorize the by school type. In this case, the school type filter can be excluded entirely from the D3 user interface, since the school filter is all that's needed.
+
+<p class="new featured"><span class="label"></span>Customize School List Order</p>
+
+By default, schools are displayed in charts in alphabetical order. But in many cases, it's more useful to organize them in meaningful way, such as in ascending order of grade levels taught at each school. To address this, the customer can now configure the ordering of schools.
+
+<p class="new"><span class="label"></span>Configure which courses are included when aggregating student attendance information.</p>
+<p class="new"><span class="label"></span>Top Enrollment measure renamed to Total Enrollment.</p>
+<p class="new"><span class="label"></span>Class grades now show pass rather than fail ratio.</p>
+
+<p class="fixed"><span class="label"></span>Error with sync criteria on select column step when creating watch list (#4289)</p>
+<p class="fixed"><span class="label"></span>Enrollment by course section is not correct for sections that span multiple terms (#4284)</p>
+<p class="fixed"><span class="label"></span>Missing campus filter on the Period Attendance dashboard (#4278)</p>
+<p class="fixed"><span class="label"></span>Toggle chart series visibility does not apply immediately (#4263)</p>
+<p class="fixed"><span class="label"></span>Scroll bar doesn't automatically appear in a certain situation (#4186)</p>
+<p class="fixed"><span class="label"></span>Tooltip is not correct for column chart that shows just measure (#4204)</p>
+
+
+
+## March 2017 Release
+
+<p class="new featured"><span class="label"></span>Watch List Results Redesign</p>
+
+Following up on the recently completed redesign for watch list creation, the watch list results have received a similar overhaul. Major changes include:
 
 * New visually appealing grid layout.
 * Increased flexibility with selecting information displayed in results grid.
 * Ability to include watch list criteria items in the results grid.
 * Expandable rows that reveal additional insights into student characteristics and performance.
+* Historical view of additions-to and removals-from the watch list.
 
-You're welcome to check out and provide feedback on our [conceptual mockup](https://embed.plnkr.co/V4d3eBcIsDuqN69071I9/?show=preview) of the new design.
+![Watch List Results](img/201703-watchlist-results.png)
 
-<p class="upcoming"><span class="label"></span>Local Data Management Capabilities</p>
+<p class="new featured"><span class="label"></span>Enrollment and Attendance Enhancements</p>
 
-Currently, all data warehouse information is sourced from external systems, either from the customer or from published sources. In some cases, required information is not available in the customer's student information system, which leads to challenges with creating the data files required for import into D3.
+Previously, D3 captured daily attendance information only. This information was also used in conjunction with the school calendar to identify student enrollment metrics. Now, the attendance model has been overhauled to introduce several new capabilities:
 
-To address this, we are introducing local data management capabilities to D3, designed to bridge the gap between data used by D3 versus data available from the customer's systems. We will be supporting both attribute and file based maintenance scenarios:
+* Enrollment and Attendance are now two distinct data sources, allowing for more detailed  enrollment analysis.
+* Regular attendance and ADA attendance are now reported on two separate attendance dashboards.
+* Period-based attendance (exception based) is now imported and used in conjunction with enrollment information to provide section-based attendance analytics.
+* Holiday tracking: using imported holiday data, a new chart highlights increased absences around holidays throughout the year.
+* Absence reason is now imported and used for a new chart as well as for ad-hoc analysis.
 
-* **Attribute maintenance example**: The School file gets imported into D3 with some missing metadata fields. The customer updates missing metadata using D3 Local Data Maintenance. Next time the School file gets imported, the metadata in D3 should not get overwritten with empty values from the file.
+Availability of this additional information will enable new dimensions of student analysis on the impact that absence has on student behavior and performance, as well as provide useful reporting capabilities to teachers for individual classes or courses.
 
-* **File maintenance example** The Action Category file is missing in the file import, and thus ActionCategoryCode has no values in the ActionType file. Using D3 Local Data Maintenance, the customer first creates action categories, then assigns action categories to the existing ActionTypes. Next time the ActionType file gets imported, action category codes do not get overwritten. 
--->
-<p class="upcoming"><span class="label"></span>More Granular Attendance Tracking</p>
+![Attendance Around Holidays Charts](img/201703-attendance-around-holidays.png)
 
-Today, D3 captures daily attendance information only. This information is also used in conjunction with the school calendar to identify student enrollment metrics. 
+<p class="new featured"><span class="label"></span>New Charts</p>
 
-We will be introducing a new approach for enrollment and attendance tracking that supports per-period attendance records. Availability of this additional information will enable new dimensions of student analysis on the impact that absence has on student behavior and performance, as well as provide useful reporting capabilities to teachers for individual classes or courses.
+Several new standard charts have been added:
+
+* For TAPR, a graduation type comparison is now available to compare your high school graduation rates by graduation type with other districts.
+* Charts for top 10 teachers with highest student grades and with lowest student grades.
+* New Grade Distribution dashboard with charts for each subject area in the selected student population.
+* IStation and SMI performance charts by teacher.
+* Incident location is now imported and report on the incidents dashboards.
+
+<p class="fixed"><span class="label"></span>Scorecard infographic should not include "All School Years" column (#4206)</p>
+<p class="fixed"><span class="label"></span>Error launching dashboard editor (#4147)</p>
+<p class="fixed"><span class="label"></span>Sidebar option change visibility not working for line charts (#3879)</p>
+<p class="fixed"><span class="label"></span>Sidebar option change color not working pie chart in explorer or dashboard (#3871)</p>
+<p class="fixed"><span class="label"></span>Endless loading grid in scorecard when no data in filter (#4188)</p>
+<p class="fixed"><span class="label"></span>Allow user to discard change during watch list editing (#3838)</p>
+<p class="fixed"><span class="label"></span>Fix series color in Purchase Orders dashboard (#4249)</p>
+<p class="fixed"><span class="label"></span>Scorecard column sizing issue when selecting year-over-year as percentage of total (#4207)</p>
+<p class="fixed"><span class="label"></span>Adjust category labels not working when changing chart sort order (#4237)</p>
+
+<p class="new featured"><span class="label"></span>Enrollment and Attendance Enhancements</p>
+
+## February 2017 Release
+
+<p class="new featured"><span class="label"></span>Teacher Scorecards</p>
+
+The new teacher scorecards provide a unique perspective on performance specifically for students in the selected teacher's classroom.
+
+To access, select Scorecards, and then Teacher:
+
+![Teacher Scorecards](img/201702-teacher-scorecard.png)
+
+Search for a teacher (if you are a teacher you'll go straight to your own scorecard):
+
+![Teacher Scorecard Search](img/201702-teacher-scorecard-search.png)
+
+The displayed scorecard includes a detailed view of students for each course section, including class grades. skill grades, absences, various reporting categories (subject area, gender, ethnicity/race, etc). Each listed student is clickable to view the student's scorecard.
+
+![Teacher Scorecard Search](img/201702-teacher-scorecard-details.png)
+
+<p class="new featured"><span class="label"></span>Activities and Awards</p>
+
+Support for extra-curricular activities and awards have been added to D3. If you provide this data to the data warehouse, you can create charts and define watch lists using this information. Activities and awards are also displayed in the student's scorecard.
+
+![Activities Chart](img/201702-activities-chart.png)
+
+<p class="new featured"><span class="label"></span>Istation Dual Language Program Support</p>
+
+The Istation performance dashboard has a new chart: *Meeting Expected Growth in Classroom Instruction Language by School*.
+
+This is a variant on an existing chart that only includes test scores for tests given in the language for which the student's classroom instruction occurs. This is especially useful when campus administrators are testing in both English and Spanish in order to gauge English proficiency, but they also want to see how the classroom instruction is going in the student’s native language. This provides insight into how well students are adapting as proportion of instructional hours taught in English increases through the grade levels.
+
+<p class="new"><span class="label"></span>Allow user to delete a chart even when in a dashboard</p>
+
+<p class="fixed"><span class="label"></span>It is possible to add criteria based columns to static watch list (#3877)</p>
+<p class="fixed"><span class="label"></span>Performance issue when 200 items page page is selected in watch list results (#3829)</p>
+<p class="fixed"><span class="label"></span>Add to favorites not working in data explorer (#3904)</p>
+<p class="fixed"><span class="label"></span>Cannot open some existing explorations (#3830)</p>
+<p class="fixed"><span class="label"></span>Exploration name is missing in application title (#3854)</p>
+<p class="fixed"><span class="label"></span>Exception when searching student scorecards (#3865)</p>
 
 ## January 2017 Release
 

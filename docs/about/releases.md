@@ -1,20 +1,43 @@
 # Release History
-<!--
+
 ## May 2017 Release
 
-### Improve Popular Categories in Explorer
+<p class="new featured"><span class="label"></span>Improve Category Selection in Explorer</p>
 
-### KPIs in Explorer
+Categorizing or disaggregating information in Explorer presents a dialog of all available categories. These are determined by dynamically analyzing the underlying cube relationships, and as the cubes have grown so have the number of available categories. To help with this, we have designated certain categories as "popular" and shown that subset initially. Overtime, we've realized that the determination of a popular category isn't static. It evolves over time, and varies from one organization to another. To address these limitations a number of improvements have been made:
 
-Charts
+1. Popular categories are now determined dynamically by tracking historical category selection.
+2. A new view has been introduced to provide quick access to recently selected categories by the user. This is now the default view when the 'Select Category' modal opens.
+3. The search behavior has been changed to better align with user expectations. Previously, it searched within the current filter (e.g. within popular categories). Now it always returns results from all categories.
 
-### Academic Skills Dashboard
+![Category Selection in Explorer](img/201705-popular-categories.png)
+
+<p class="new featured"><span class="label"></span>KPIs in Explorer</p>
+
+Until now, Key Performance Indicators appeared in dashboard and standalone charts, and in scorecards. We've recently updating the rendering of charts in Explorer to share the same functionality as the other charts. As a result, KPIs defined for values will automatically appear in Explorer when those values are explored.
+
+![KPIs in Explorer](img/201705-explorer-kpis.png)
+
+<p class="new featured"><span class="label"></span>Academic Skills</p>
+
+After adding support for skills to grading period grades last month, we've now created a skills-specific dashboard to highlight this information in D3, as well as include skills-based information in student scorecards and include skills criteria when creating a new watch list.
+
+![Skills Dashboard](img/201705-skills-dashboard.png)
+
+<p class="new featured"><span class="label"></span>Family Attendance in Student Scorecards</p>
+
+When multiple students belong to the same family, the student scorecard now includes a Family Attendance tab so you can easily contrast attendance against the other family members.
+
+![Family Attendance](img/201705-family-attendance.png)
 
 <p class="fixed"><span class="label"></span>In specific situation, redirects to Forgot Password after successful login (#4418)</p>
 <p class="fixed"><span class="label"></span>Scorecard grids with many columns compress cell information when year-over-year overlay active (#4385)</p>
-<p class="fixed"><span class="label"></span>Do not show Other category if is has only one item (#4377)</p>
+<p class="fixed"><span class="label"></span>Do not show Other category if it has only one item (#4377)</p>
 <p class="fixed"><span class="label"></span>Some charts show an error for the District HR and Campus HR roles (#4632)</p>
--->
+<p class="fixed"><span class="label"></span>Fix "All" totals in student activity grid of scorecard (#4484)</p>
+<p class="fixed"><span class="label"></span>Filtering grade levels by school is not working (#4444)</p>
+<p class="fixed"><span class="label"></span>Bottom N function is not working in explorer (#4438)</p>
+<p class="fixed"><span class="label"></span>Explore action is not active for teacher scorecard (#4455)</p>
 
 ## April 2017 Release
 

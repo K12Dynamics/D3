@@ -65,9 +65,9 @@ Core roles are automatically setup for each D3 implementation. They are the most
         </tr>
         <tr>
             <td>Board<br><i>board</i></td>
-            <td>District</td>
-            <td>Yes</td>
-            <td>Yes</td>
+            <td>Summary</td>
+            <td>No</td>
+            <td>No</td>
             <td>
                 Attendance/Enrollment<br>
                 Performance<br>
@@ -231,7 +231,7 @@ Additional roles are setup as needed to support customized access requirements.
             <td>Attendance Office<br><i>attendance</i></td>
             <td>District</td>
             <td>No</td>
-            <td>Yes</td>
+            <td>No</td>
             <td>&lt;None&gt;</td>
         </tr>
         <tr>
@@ -282,6 +282,10 @@ D3 automatically identifies the subset of students available to the user as foll
     </thead>
     <tbody>
         <tr>
+            <td>Summary</td>
+            <td>All student summary information but not detailed information on individual students.</td>
+        </tr>
+       <tr>
             <td>District</td>
             <td>All students</td>
         </tr>

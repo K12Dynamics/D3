@@ -230,8 +230,8 @@ Additional roles are setup as needed to support customized access requirements.
         <tr>
             <td>Attendance Office<br><i>attendance</i></td>
             <td>District</td>
-            <td>No</td>
-            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
             <td>&lt;None&gt;</td>
         </tr>
         <tr>

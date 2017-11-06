@@ -4,6 +4,8 @@
 
 # Favorites
 
+## Introduction
+
 The Favorites feature provides a way for each user to mark library items for quick access.
 
 Each favorite can be launch with just two clicks. First, click the main menu icon. Your Favorites are automatically displayed as the first tab in the menu (identified by a star icon). Second, click a favorited item to launch it.

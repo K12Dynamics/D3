@@ -232,7 +232,7 @@ Additional roles are setup as needed to support customized access requirements.
             <td>District</td>
             <td>Yes</td>
             <td>Yes</td>
-            <td>&lt;None&gt;</td>
+            <td>Attendance/Enrollment</td>
         </tr>
         <tr>
             <td>Campus Academics<br><i>cacademics</i></td>

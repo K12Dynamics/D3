@@ -2,7 +2,7 @@
 
 ## View this documentation
 
-http://docs.accessd3.com
+Documentation is accessed while signed in to D3 from the Info menu. It is hosted on readthedocs.org via the CNAME http://docs.accessd3.com. However, there is a security restriction in place to prevent the documentation from being reviewed independently of D3. Documentation changes are deployed automatically on commit via a Webhook.
 
 ## Contribute to this documentation
 

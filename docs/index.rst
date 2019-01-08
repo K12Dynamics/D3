@@ -93,6 +93,7 @@ The main documentation for D3 is organized into the following sections:
    about/releases
    about/accessibility
    about/confidentiality
+   about/legal
    
 ..
     Indices and tables
